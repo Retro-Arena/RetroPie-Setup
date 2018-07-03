@@ -48,4 +48,4 @@ You can find useful information about several components or for several frequent
 Thanks
 ------
 
-This script just simplifies the usage of the great works of many other people that enjoy the spirit of retrogaming. Many thanks go to them!
+This script just simplifies the usage of the great works of many other people that enjoy the spirit of retrogaming. Many thanks go to them!!
