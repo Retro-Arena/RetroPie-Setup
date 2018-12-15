@@ -1015,7 +1015,7 @@ function bios_check() {
     if [[ "$SYSTEM" =~ ^("naomi"|"atomiswave")$ ]]; then
         for filename in airlbios awbios f355bios f355dlx hod2bios naomi; do
             if [[ ! -f "$BIOS/dc/$filename.zip" ]]; then
-                dialog --no-cancel --pause "REQUIRED BIOS FILES\n\nPlease copy airlbios.zip, awbios.zip, f355bios.zip, f355dlx.zip, hod2bios.zip, and naomi.zip from the Mame BIOS pack to the SD card:\n\n$BIOS/dc\n\nIn addition, an update to lr-reicast from binary or source is required.\n\nCheck http://bit.do/lr-reicast for more information." 22 76 15
+                dialog --no-cancel --pause "REQUIRED BIOS FILES\n\nCopy airlbios.zip, awbios.zip, f355bios.zip, f355dlx.zip, hod2bios.zip, and naomi.zip from the Mame BIOS pack to the internal SD card:\n\n$BIOS/dc\n\nIn addition, an update to lr-reicast from binary or source is required.\n\nCheck http://bit.do/lr-reicast for more information." 22 76 15
                 clear
                 exit 1
             fi
@@ -1029,7 +1029,7 @@ function bios_check() {
     if [[ "$SYSTEM" == "dreamcast" ]]; then
         for filename in dc_boot dc_flash; do
             if [[ ! -f "$BIOS/dc/$filename.bin" ]]; then
-                dialog --no-cancel --pause "REQUIRED BIOS FILES\n\nPlease copy dc_boot.bin and dc_flash.bin to the SD card:\n\n$BIOS/dc\n\nCheck http://bit.do/lr-reicast for more information." 22 76 15
+                dialog --no-cancel --pause "REQUIRED BIOS FILES\n\nCopy dc_boot.bin and dc_flash.bin to the internal SD card:\n\n$BIOS/dc\n\nCheck http://bit.do/lr-reicast for more information." 22 76 15
                 clear
                 exit 1
             fi
@@ -1038,7 +1038,7 @@ function bios_check() {
     if [[ "$SYSTEM" == "saturn" ]]; then
         for filename in saturn_bios; do
             if [[ ! -f "$BIOS/$filename.bin" ]]; then
-                dialog --no-cancel --pause "REQUIRED BIOS FILES\n\nPlease copy saturn_bios.bin to the SD card:\n\n$BIOS\n\nIt is recommended to use the region free BIOS with MD5 of bde8d6225194b1be7d7127f9f5a7bb29." 22 76 15
+                dialog --no-cancel --pause "REQUIRED BIOS FILES\n\nCopy saturn_bios.bin to the internal SD card:\n\n$BIOS\n\nIt is recommended to use the region free BIOS with MD5 of:\n\nbde8d6225194b1be7d7127f9f5a7bb29" 22 76 15
                 clear
                 exit 1
             fi
