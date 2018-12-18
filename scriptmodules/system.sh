@@ -262,6 +262,9 @@ function get_platform() {
             Vero4K)
                 __platform="vero4k"
                 ;;
+            "Allwinner sun8i Family")
+                __platform="armv7-mali"
+                ;;
             *)
                 if grep -q "Rock64" /sys/firmware/devicetree/base/model 2>/dev/null; then
                     __platform="rock64"
