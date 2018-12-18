@@ -1108,13 +1108,19 @@ function ogst_emu() {
             sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
             
             OGST="/home/pigaming/ogst/"
-            SHOTS="/home/pigaming/RetroPie/roms/$SYSTEM/media/screenshots/"
-            MRQUS="/home/pigaming/RetroPie/roms/$SYSTEM/media/marquees/"
+            SKY_SS="/home/pigaming/RetroPie/roms/$SYSTEM/media/screenshots/"
+            STD_SS="/home/pigaming/RetroPie/roms/$SYSTEM/screenshots/"
+            SKY_MQ="/home/pigaming/RetroPie/roms/$SYSTEM/media/marquees/"
+            STD_MQ="/home/pigaming/RetroPie/roms/$SYSTEM/marquees/"
             
-            if [[ -e "$MRQUS/$ROM_BN.png" ]]; then
-                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$MRQUS/$ROM_BN.png" &> /dev/null
-            elif [[ -e "$SHOTS/$ROM_BN.png" ]]; then
-                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SHOTS/$ROM_BN.png" &> /dev/null
+            if [[ -e "$SKY_MQ/$ROM_BN.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SKY_MQ/$ROM_BN.png" &> /dev/null
+            elif [[ -e "$STD_MQ/$ROM_BN.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$STD_MQ/$ROM_BN.png" &> /dev/null
+            elif [[ -e "$SKY_SS/$ROM_BN.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SKY_SS/$ROM_BN.png" &> /dev/null
+            elif [[ -e "$STD_SS/$ROM_BN.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$STD_SS/$ROM_BN.png" &> /dev/null
             elif [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                 sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
             else
