@@ -110,7 +110,7 @@ function updatescript_setup()
     fi
     popd >/dev/null
 
-    printMsgs "dialog" "Scripts have beenn updated."
+    printMsgs "dialog" "Scripts have been updated. Press OK to continue."
     return 0
 }
 
