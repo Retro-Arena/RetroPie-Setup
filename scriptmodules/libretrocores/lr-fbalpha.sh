@@ -15,11 +15,6 @@ rp_module_help="Previously called lr-fba-next\n\ROM Extension: .zip\n\nCopy your
 rp_module_licence="NONCOM https://raw.githubusercontent.com/libretro/fbalpha/master/src/license.txt"
 rp_module_section="main"
 
-function _update_hook_lr-fbalpha() {
-    # move from old location and update emulators.cfg
-    renameModule "lr-fba-next" "lr-fbalpha"
-}
-
 function sources_lr-fbalpha() {
     gitPullOrClone "$md_build" https://github.com/libretro/fbalpha.git
 }
