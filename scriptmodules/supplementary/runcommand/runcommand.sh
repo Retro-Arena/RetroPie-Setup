@@ -1104,12 +1104,18 @@ function ogst_emu() {
     for pid in $pids; do
         sleep 3
         
-        if ! lsmod | grep -q 'fbtft_device'; then           
+        if ! lsmod | grep -q 'fbtft_device'; then
             sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
-            if [[ -e "/home/pigaming/ogst/system-$SYSTEM.png" ]]; then
-                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "/home/pigaming/ogst/system-$SYSTEM.png" &> /dev/null
+            
+            OGST="/home/pigaming/ogst/"
+            SHOTS="/home/pigaming/RetroPie/roms/$SYSTEM/media/screenshots/"
+            
+            if [[ -e "$SHOTS/$ROM_BN.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SHOTS/$ROM_BN.png" &> /dev/null
+            elif [[ -e "$OGST/system-$SYSTEM.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
             else
-                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "/home/pigaming/ogst/ora.png" &> /dev/null
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
             fi
         fi
         
