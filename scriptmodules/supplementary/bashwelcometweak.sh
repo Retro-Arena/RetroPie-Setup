@@ -69,23 +69,20 @@ function retropie_welcome() {
     local bfgpur="${bld}$(tput setaf 5)"
     local bfgcyn="${bld}$(tput setaf 6)"
     local bfgwht="${bld}$(tput setaf 7)"
-
     local logo=(
-
-        "${fgblu}      --      "
-        "${fgblu}     |  |     "
-        "${fgblu}     |  |     "
-        "${fgblu} ___/    \___ "
-        "${fgblu} |__________| "
-        "${fgylw}  ________         ____  ___ "
-        "${fgylw} /_  __/ /_  ___  / __ \/   |"
-        "${fgred}  / / / __ \/ _ \/ /_/ / /| |"
-        "${fgred} / / / / / /  __/ _, _/ ___ |"
-        "${fggrn}/_/ /_/ /_/\___/_/ |_/_/  |_|"
-        " "
-        " "
+        "                   "
+        "                   "
+        "${fgblu}       ____        "
+        "${fgblu}       |  |        "
+        "${fgblu}       |  |        "
+        "${fgblu}       |  |        "		
+        "${fgblu}  ____/    \__${fgred}==${fgblu}_  "
+        "${fgblu} |               | "
+        "${fgblu} | ${fgred}TheRetroArena ${fgblu}| "
+        "${fgblu} |_______________| "
+        "                   "
+        "                   "
         )
-
 
     local out
     local i
