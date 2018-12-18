@@ -70,18 +70,18 @@ function retropie_welcome() {
     local bfgcyn="${bld}$(tput setaf 6)"
     local bfgwht="${bld}$(tput setaf 7)"
     local logo=(
-        "                   "
-        "                   "
-        "${fgblu}       ____        "
-        "${fgblu}       |  |        "
-        "${fgblu}       |  |        "
-        "${fgblu}       |  |        "		
-        "${fgblu}  ____/    \__${fgred}==${fgblu}_  "
-        "${fgblu} |               | "
-        "${fgblu} | ${fgred}TheRetroArena ${fgblu}| "
-        "${fgblu} |_______________| "
-        "                   "
-        "                   "
+        "                  "
+        "${fgblu}      ____        "
+        "${fgblu}      |  |        "
+        "${fgblu}      |  |        "
+        "${fgblu}      |  |        "		
+        "${fgblu} ____/    \__${fgred}==${fgblu}_  "
+        "${fgblu}|               | "
+        "${fgblu}| ${fggrn}TheRetroArena ${fgblu}| "
+        "${fgblu}|_______________| "
+        "${fggrn}theretroarena.com "
+        "                  "
+        "                  "
         )
 
     local out
@@ -114,10 +114,7 @@ function retropie_welcome() {
                 out+="${fgred}IP Address.........: $(ip route get 8.8.8.8 2>/dev/null | awk '{print $NF; exit}')"
                 ;;
             9)
-                out+="Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F"
-                ;;
-            10)
-                out+="${fgwht}TheRA, http://odroidarena.com"
+                out+="Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F{fgwht}"
                 ;;
         esac
         out+="\n"
