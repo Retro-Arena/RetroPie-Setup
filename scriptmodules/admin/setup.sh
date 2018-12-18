@@ -503,24 +503,17 @@ function gui_setup() {
 
         cmd=(dialog --backtitle "$__backtitle" --title "TheRA-Setup Script" --cancel-label "Exit" --item-help --help-button --default-item "$default" --menu "TheRA: v1.62 | Base: v$__version\nLast Commit: $commit" 22 76 16)
         options=(
-            #I "Basic install" "I This will install all packages from Core and Main which gives a basic TheRA install. Further packages can then be installed later from the Optional and Experimental sections. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
+            S "Update Scripts"
+            "S Update the TheRA-Setup script to the latest version."
 
-            #U "Update" "U Updates TheRA-Setup and all currently installed packages. If binaries are available they will be used, otherwise packages will be built from source."
+            P "Manage Packages"
+            "P Install/Uninstall and Configure the various components of TheRA, including emulators, ports, and controller drivers."
 
-            #X "Uninstall TheRA"
-            #"X Uninstall TheRA completely."
-
-            S "Update TheRA-Setup script"
-            "S Update this TheRA-Setup script. This will update this main management script only, but will not update any software packages. To update packages use the 'Update' option from the main menu, which will also update the TheRA-Setup script."
-
-            P "Manage packages"
-            "P Install/Remove and Configure the various components of RetroPie, including emulators, ports, and controller drivers."
-
-            C "Configuration / tools"
+            C "Configuration and Tools"
             "C Configuration and Tools. Any packages you have installed that have additional configuration options will also appear here."
 
-            R "Perform reboot"
-            "R Reboot your machine."
+            R "Reboot"
+            "R Restarts the machine."
         )
 
         choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
