@@ -95,7 +95,7 @@ function updatescript_setup()
 {
     clear
     chown -R $user:$user "$scriptdir"
-    printHeading "Fetching latest version of the RetroPie Setup Script."
+    printHeading "Fetching latest version of the TheRA Setup Script."
     pushd "$scriptdir" >/dev/null
     if [[ ! -d ".git" ]]; then
         printMsgs "dialog" "Cannot find directory '.git'. Please clone the RetroPie Setup script via 'git clone https://github.com/RetroPie/RetroPie-Setup.git'"
@@ -110,7 +110,7 @@ function updatescript_setup()
     fi
     popd >/dev/null
 
-    printMsgs "dialog" "Fetched the latest version of the RetroPie Setup script."
+    printMsgs "dialog" "Fetched the latest version of the TheRA Setup script."
     return 0
 }
 
