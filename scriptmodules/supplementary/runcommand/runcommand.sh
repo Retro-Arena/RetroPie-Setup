@@ -1110,6 +1110,7 @@ function ogst_emu() {
             OGST="/home/pigaming/ogst/"
             SKY_SS="/home/pigaming/RetroPie/roms/$SYSTEM/media/screenshots/"
             STD_SS="/home/pigaming/RetroPie/roms/$SYSTEM/screenshots/"
+            DLI_SS="/home/pigaming/.emulationstation/downloaded_images/$SYSTEM/"
             SKY_MQ="/home/pigaming/RetroPie/roms/$SYSTEM/media/marquees/"
             STD_MQ="/home/pigaming/RetroPie/roms/$SYSTEM/marquees/"
             
@@ -1121,6 +1122,10 @@ function ogst_emu() {
                 sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SKY_SS/$ROM_BN.png" &> /dev/null
             elif [[ -e "$STD_SS/$ROM_BN.png" ]]; then
                 sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$STD_SS/$ROM_BN.png" &> /dev/null
+            elif [[ -e "$DLI_SS/$ROM_BN.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$DLI_SS/$ROM_BN.png" &> /dev/null
+            elif [[ -e "$DLI_SS/$ROM_BN-image.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$DLI_SS/$ROM_BN-image.png" &> /dev/null
             elif [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                 sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
             else
