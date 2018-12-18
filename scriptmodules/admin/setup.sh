@@ -10,7 +10,7 @@
 #
 
 rp_module_id="setup"
-rp_module_desc="GUI based setup for RetroPie"
+rp_module_desc="GUI based setup for TheRA"
 rp_module_section=""
 
 function _setup_gzip_log() {
@@ -34,7 +34,7 @@ function rps_logInit() {
 
 function rps_logStart() {
     echo -e "Log started at: $(date -d @$time_start)\n"
-    echo "RetroPie-Setup version: $__version ($(git -C "$scriptdir" log -1 --pretty=format:%h))"
+    echo "TheRA-Setup version: $__version ($(git -C "$scriptdir" log -1 --pretty=format:%h))"
     echo "System: $(uname -a)"
 }
 
@@ -135,7 +135,7 @@ function post_update_setup() {
     } &> >(_setup_gzip_log "$logfilename")
     rps_printInfo "$logfilename"
 
-    printMsgs "dialog" "NOTICE: The RetroPie-Setup script and pre-made RetroPie SD card images are available to download for free from https://retropie.org.uk.\n\nThe pre-built RetroPie image includes software that has non commercial licences. Selling RetroPie images or including RetroPie with your commercial product is not allowed.\n\nNo copyrighted games are included with RetroPie.\n\nIf you have been sold this software, you can let us know about it by emailing retropieproject@gmail.com."
+    printMsgs "dialog" "NOTICE: The TheRA-Setup script and pre-made TheRA SD card images are available to download for free from http://odroidarena.com/downloads/.\n\nThe pre-built TheRA image includes software that has non commercial licences. Selling TheRA images or including TheRA or RetroPie with your commercial product is not allowed.\n\nNo copyrighted games are included with TheRA or RetroPie.\n\nIf you have been sold this software, you can let us know about it by emailing therealretroarena@outlook.com."
 
     # return to set return function
     "${return_func[@]}"
@@ -468,23 +468,23 @@ function packages_gui_setup() {
 
 function uninstall_setup()
 {
-    dialog --defaultno --yesno "Are you sure you want to uninstall RetroPie?" 22 76 2>&1 >/dev/tty || return 0
-    dialog --defaultno --yesno "Are you REALLY sure you want to uninstall RetroPie?\n\n$rootdir will be removed - this includes configuration files for all RetroPie components." 22 76 2>&1 >/dev/tty || return 0
+    dialog --defaultno --yesno "Are you sure you want to uninstall TheRA?" 22 76 2>&1 >/dev/tty || return 0
+    dialog --defaultno --yesno "Are you REALLY sure you want to uninstall TheRA?\n\n$rootdir will be removed - this includes configuration files for all RetroPie components." 22 76 2>&1 >/dev/tty || return 0
     clear
-    printHeading "Uninstalling RetroPie"
+    printHeading "Uninstalling TheRA"
     for idx in "${__mod_idx[@]}"; do
         rp_isInstalled "$idx" && rp_callModule $idx remove
     done
     rm -rfv "$rootdir"
     dialog --defaultno --yesno "Do you want to remove all the files from $datadir - this includes all your installed ROMs, BIOS files and custom splashscreens." 22 76 2>&1 >/dev/tty && rm -rfv "$datadir"
-    if dialog --defaultno --yesno "Do you want to remove all the system packages that RetroPie depends on? \n\nWARNING: this will remove packages like SDL even if they were installed before you installed RetroPie - it will also remove any package configurations - such as those in /etc/samba for Samba.\n\nIf unsure choose No (selected by default)." 22 76 2>&1 >/dev/tty; then
+    if dialog --defaultno --yesno "Do you want to remove all the system packages that TheRA depends on? \n\nWARNING: this will remove packages like SDL even if they were installed before you installed TheRA - it will also remove any package configurations - such as those in /etc/samba for Samba.\n\nIf unsure choose No (selected by default)." 22 76 2>&1 >/dev/tty; then
         clear
         # remove all dependencies
         for idx in "${__mod_idx[@]}"; do
             rp_isInstalled "$idx" && rp_callModule "$idx" depends remove
         done
     fi
-    printMsgs "dialog" "RetroPie has been uninstalled."
+    printMsgs "dialog" "TheRA has been uninstalled."
 }
 
 function reboot_setup()
@@ -501,17 +501,17 @@ function gui_setup() {
     while true; do
         local commit=$(git -C "$scriptdir" log -1 --pretty=format:"%cr (%h)")
 
-        cmd=(dialog --backtitle "$__backtitle" --title "RetroPie-Setup Script" --cancel-label "Exit" --item-help --help-button --default-item "$default" --menu "Retro-Arena: v1.61\nSetup-Scrpt: v$__version\nLast Commit: $commit" 22 76 16)
+        cmd=(dialog --backtitle "$__backtitle" --title "TheRA-Setup Script" --cancel-label "Exit" --item-help --help-button --default-item "$default" --menu "TheRA: v1.61\nSetup-Script: v$__version\nLast Commit: $commit" 22 76 16)
         options=(
-            #I "Basic install" "I This will install all packages from Core and Main which gives a basic RetroPie install. Further packages can then be installed later from the Optional and Experimental sections. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
+            #I "Basic install" "I This will install all packages from Core and Main which gives a basic TheRA install. Further packages can then be installed later from the Optional and Experimental sections. If binaries are available they will be used, alternatively packages will be built from source - which will take longer."
 
-            #U "Update" "U Updates RetroPie-Setup and all currently installed packages. Will also allow to update OS packages. If binaries are available they will be used, otherwise packages will be built from source."
+            #U "Update" "U Updates TheRA-Setup and all currently installed packages. If binaries are available they will be used, otherwise packages will be built from source."
 
-            #X "Uninstall RetroPie"
-            #"X Uninstall RetroPie completely."
+            #X "Uninstall TheRA"
+            #"X Uninstall TheRA completely."
 
-            S "Update RetroPie-Setup script"
-            "S Update this RetroPie-Setup script. This will update this main management script only, but will not update any software packages. To update packages use the 'Update' option from the main menu, which will also update the RetroPie-Setup script."
+            S "Update TheRA-Setup script"
+            "S Update this TheRA-Setup script. This will update this main management script only, but will not update any software packages. To update packages use the 'Update' option from the main menu, which will also update the TheRA-Setup script."
 
             P "Manage packages"
             "P Install/Remove and Configure the various components of RetroPie, including emulators, ports, and controller drivers."
@@ -560,7 +560,7 @@ function gui_setup() {
                 config_gui_setup
                 ;;
             S)
-                dialog --defaultno --yesno "Are you sure you want to update the RetroPie-Setup script ?" 22 76 2>&1 >/dev/tty || continue
+                dialog --defaultno --yesno "Are you sure you want to update the TheRA-Setup script ?" 22 76 2>&1 >/dev/tty || continue
                 if updatescript_setup; then
                     joy2keyStop
                     exec "$scriptdir/retropie_packages.sh" setup post_update gui_setup

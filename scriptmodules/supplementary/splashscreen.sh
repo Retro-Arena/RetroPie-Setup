@@ -15,7 +15,7 @@ rp_module_section="main"
 rp_module_flags="noinstclean !x86 !osmc !xbian  !kms"
 
 function _update_hook_splashscreen() {
-    # make sure splashscreen is always up to date if updating just RetroPie-Setup
+    # make sure splashscreen is always up to date if updating just TheRA-Setup
     if rp_isInstalled "$md_idx"; then
         install_bin_splashscreen
         configure_splashscreen
@@ -237,7 +237,7 @@ function preview_splashscreen() {
                 3)
                     file=$(choose_splashscreen "$path" "video")
                     [[ -z "$file" ]] && break
-                    omxplayer -b --layer 10000 "$file"
+                    mplayer -vo fbdev -fs "$file"
                     ;;
             esac
         done
@@ -308,7 +308,7 @@ function gui_splashscreen() {
                     ;;
                 4)
                     default_splashscreen
-                    printMsgs "dialog" "Splashscreen set to RetroPie default."
+                    printMsgs "dialog" "Splashscreen set to TheRA default."
                     ;;
                 5)
                     editFile /etc/splashscreen.list

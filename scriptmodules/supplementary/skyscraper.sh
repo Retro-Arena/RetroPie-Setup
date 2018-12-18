@@ -316,10 +316,10 @@ function _load_config_skyscraper() {
         'rom_name=0' \
         'use_rom_folder=0' \
         'download_videos=0' \
-        'cache_marquees=1' \
-        'cache_covers=1' \
-        'cache_wheels=1' \
-        'cache_screenshots=1' \
+        'cache_marquees=0' \
+        'cache_covers=0' \
+        'cache_wheels=0' \
+        'cache_screenshots=0' \
         'scrape_source=screenscraper' \
         'remove_brackets=0' \
         'force_refresh=0'

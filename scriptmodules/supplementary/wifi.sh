@@ -172,7 +172,7 @@ function _check_country_wifi() {
     iniConfig "=" "" /etc/wpa_supplicant/wpa_supplicant.conf
     iniGet "country"
     if [[ -z "$ini_value" ]]; then
-        if dialog --defaultno --yesno "You don't currently have your WiFi country set in /etc/wpa_supplicant/wpa_supplicant.conf\n\nOn a Raspberry Pi 3 Model B+ your WiFI will be disabled until the country is set. You can do this via raspi-config which is available from the RetroPie menu in Emulation Station. Once in raspi-config you can set your country via menu 4 (Localisation Options)\n\nDo you want me to launch raspi-config for you now ?" 22 76 2>&1 >/dev/tty; then
+        if dialog --defaultno --yesno "You don't currently have your WiFi country set in /etc/wpa_supplicant/wpa_supplicant.conf" 22 76 2>&1 >/dev/tty; then
             raspi-config
         fi
     fi

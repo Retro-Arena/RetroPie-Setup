@@ -10,7 +10,7 @@
 #
 
 rp_module_id="retropiemenu"
-rp_module_desc="RetroPie configuration menu for EmulationStation"
+rp_module_desc="TheRA configuration menu for EmulationStation"
 rp_module_section="core"
 
 function _update_hook_retropiemenu() {
@@ -78,12 +78,12 @@ function configure_retropiemenu()
         'Configure audio settings. Choose default of auto, 3.5mm jack, or HDMI. Mixer controls, and apply default settings.'
         'Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.'
         'Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.'
-        'Install, uninstall, or update EmulationStation themes. Most themes can be previewed at https://github.com/retropie/ RetroPie-Setup/wiki/themes.'
+        'Install, uninstall, or update EmulationStation themes.'
         'Basic ascii file manager for linux allowing you to browse, copy, delete, and move files.'
         'Change user password, boot options, internationalization, camera, add your pi to Rastrack, overclock, overscan, memory split, SSH and more.'
         'Launches the RetroArch GUI so you can change RetroArch options. Note: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.'
         'Set up RetroArch Netplay options, choose host or client, port, host IP, delay frames, and your nickname.'
-        'Install RetroPie from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other RetroPie-related configurations.'
+        'Install TheRA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other TheRA-related configurations.'
         'Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.'
         'Displays your current IP address, as well as other information provided by the command, "ip addr show."'
         'Enable or disable the splashscreen on RetroPie boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.'

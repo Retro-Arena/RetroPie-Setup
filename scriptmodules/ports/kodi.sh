@@ -41,6 +41,12 @@ function depends_kodi() {
 }
 
 function install_bin_kodi() {
+    local accepted=0
+    whiptail --yes-button "Accept" --no-button "Decline" --defaultno --yesno "If you choose to install this application you are accepting that if you utilize Add-Ons you are fully responsible for any legal outcome or action taken for said use of the Add-Ons you have installed and configured. The Retro Arena takes no responsibility for the installation or use of Kodi nor any of its Add-Ons features. By clicking yes you are consenting to full responsibilty. By clicking yes you also accept that The Retro Arena nor its community are required to provide any support for the installation of this software." 15 60 2>&1 >/dev/tty && accepted=1
+    if [[ "$accepted" -ne 1 ]]; then
+       md_ret_errors+=("$md_desc Agreement not accepted, install aborted.")
+       return
+    fi
     # force aptInstall to get a fresh list before installing
     __apt_update=0
     aptInstall kodi kodi-peripheral-joystick kodi-inputstream-adaptive kodi-inputstream-rtmp
