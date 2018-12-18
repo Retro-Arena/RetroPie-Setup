@@ -1109,8 +1109,11 @@ function ogst_emu() {
             
             OGST="/home/pigaming/ogst/"
             SHOTS="/home/pigaming/RetroPie/roms/$SYSTEM/media/screenshots/"
+            MRQUS="/home/pigaming/RetroPie/roms/$SYSTEM/media/marquees/"
             
-            if [[ -e "$SHOTS/$ROM_BN.png" ]]; then
+            if [[ -e "$MRQUS/$ROM_BN.png" ]]; then
+                sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$MRQUS/$ROM_BN.png" &> /dev/null
+            elif [[ -e "$SHOTS/$ROM_BN.png" ]]; then
                 sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SHOTS/$ROM_BN.png" &> /dev/null
             elif [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                 sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
