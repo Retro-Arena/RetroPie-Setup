@@ -114,7 +114,7 @@ function retropie_welcome() {
                 out+="${fgred}IP Address.........: $(ip route get 8.8.8.8 2>/dev/null | awk '{print $NF; exit}')"
                 ;;
             9)
-                out+="Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F{fgwht}"
+                out+="${fgred}Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F${fgwht}"
                 ;;
         esac
         out+="\n"
