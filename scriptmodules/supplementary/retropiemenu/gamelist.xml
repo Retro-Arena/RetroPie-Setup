@@ -49,6 +49,12 @@
 		<image>./icons/filemanager.png</image>
 	</game>
 	<game>
+		<path>./odroidconfig.rp</path>
+		<name>Odroid Config</name>
+		<desc>Change user password, boot options, internationalization, camera, add your pi to Rastrack, overclock, overscan, memory split, SSH and more.</desc>
+		<image>./icons/odroidconfig.png</image>
+	</game>
+	<game>
 		<path>./retroarch.rp</path>
 		<name>RetroArch</name>
 		<desc>Launches the RetroArch GUI so you can change RetroArch options. NOTE: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.</desc>

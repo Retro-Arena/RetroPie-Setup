@@ -117,6 +117,7 @@ function configure_retropiemenu()
             "$function" "retropie" "RetroPie" "$file.rp" "$name" "$desc" "$image"
         done
     done
+    cp -p $home/RetroPie/retropiemenu/gamelist.xml $home/.emulationstation/gamelists/retropie/gamelist.xml
 }
 
 function remove_retropiemenu() {
