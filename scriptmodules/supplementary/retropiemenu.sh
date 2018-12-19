@@ -28,7 +28,7 @@ function depends_retropiemenu() {
 }
 
 function install_bin_retropiemenu() {
-    cp -R $home/RetroPie-Setup/scriptmodules/supplementary/retropiemenu/. $home/RetroPie/retropiemenu/
+    #cp -R $home/RetroPie-Setup/scriptmodules/supplementary/retropiemenu/. $home/RetroPie/retropiemenu/
     wget -O /usr/bin/odroid-config https://raw.githubusercontent.com/sikotik/odroid-config/master/odroid-config
     wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh
     chmod a+X /usr/bin/init_resize.sh && chmod a+x /usr/bin/odroid-config
@@ -41,7 +41,7 @@ function configure_retropiemenu()
 
     local rpdir="$home/RetroPie/retropiemenu"
     mkdir -p "$rpdir"
-    cp -Rv "$md_data/icons" "$rpdir/"
+    cp -R "$md_data/." "$rpdir/"
     chown -R $user:$user "$rpdir"
 
     isPlatform "mali" && rm -f "$rpdir/dispmanx.rp"
@@ -54,7 +54,6 @@ function configure_retropiemenu()
         'filemanager'
         'odroidconfig'
         'retroarch'
-        'retronetplay'
         'rpsetup'
         'runcommand'
         'showip'
@@ -68,7 +67,6 @@ function configure_retropiemenu()
         'File Manager'
         'Odroid-Config'
         'Retroarch'
-        'RetroArch Net Play'
         'TheRA-Setup'
         'Run Command Configuration'
         'Show IP'
@@ -82,7 +80,6 @@ function configure_retropiemenu()
         'Basic ascii file manager for linux allowing you to browse, copy, delete, and move files.'
         'Change user password, boot options, internationalization, camera, add your pi to Rastrack, overclock, overscan, memory split, SSH and more.'
         'Launches the RetroArch GUI so you can change RetroArch options. Note: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.'
-        'Set up RetroArch Netplay options, choose host or client, port, host IP, delay frames, and your nickname.'
         'Install TheRA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.'
         'Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.'
         'Displays your current IP address, as well as other information provided by the command, "ip addr show."'
@@ -117,7 +114,7 @@ function configure_retropiemenu()
             "$function" "retropie" "RetroPie" "$file.rp" "$name" "$desc" "$image"
         done
     done
-    cp -p $home/RetroPie/retropiemenu/gamelist.xml $home/.emulationstation/gamelists/retropie/gamelist.xml
+    cp -p "$rpdir/gamelist.xml" "$home/.emulationstation/gamelists/retropie/gamelist.xml"
 }
 
 function remove_retropiemenu() {
