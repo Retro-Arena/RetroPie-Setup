@@ -1103,13 +1103,8 @@ function ogst_emu() {
 
     for pid in $pids; do
         sleep 3
-        
-    for pid in $pids; do
-        sleep 3
-        
         if ! lsmod | grep -q 'fbtft_device'; then
             sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
-            
             OGST_1="$HOME/ogst"
             OGST_2=".emulationstation/ogst_themes/TheRA-v1"
             SKY_MQ="$HOME/RetroPie/roms/$SYSTEM/media/marquees"
@@ -1117,7 +1112,7 @@ function ogst_emu() {
             STD_MQ="$HOME/RetroPie/roms/$SYSTEM/marquees"
             STD_SS="$HOME/RetroPie/roms/$SYSTEM/screenshots"
             DLI_SS="$HOME/.emulationstation/downloaded_images/$SYSTEM"
-            
+            #option1
             if [[ -e "$HOME/scripts/ogst001" ]]; then
                 if [[ -e "$OGST_1/system-$SYSTEM.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_1/system-$SYSTEM.png" &> /dev/null
@@ -1129,7 +1124,7 @@ function ogst_emu() {
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_2/default.png" &> /dev/null
                 fi
             fi
-            
+            #option2
             if [[ -e "$HOME/scripts/ogst002" ]]; then
                 if [[ -e "$SKY_MQ/$ROM_BN.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SKY_MQ/$ROM_BN.png" &> /dev/null
@@ -1137,7 +1132,7 @@ function ogst_emu() {
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
                 fi
             fi
-            
+            #option3
             if [[ -e "$HOME/scripts/ogst003" ]]; then
                 if [[ -e "$SKY_SS/$ROM_BN.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SKY_SS/$ROM_BN.png" &> /dev/null
@@ -1145,7 +1140,7 @@ function ogst_emu() {
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
                 fi
             fi
-            
+            #option4
             if [[ -e "$HOME/scripts/ogst004" ]]; then
                 if [[ -e "$STD_MQ/$ROM_BN.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$STD_MQ/$ROM_BN.png" &> /dev/null
@@ -1153,7 +1148,7 @@ function ogst_emu() {
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
                 fi
             fi
-            
+            #option5
             if [[ -e "$HOME/scripts/ogst005" ]]; then
                 if [[ -e "$STD_SS/$ROM_BN.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$STD_SS/$ROM_BN.png" &> /dev/null
@@ -1161,7 +1156,7 @@ function ogst_emu() {
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
                 fi
             fi
-            
+            #option6
             if [[ -e "$HOME/scripts/ogst006" ]]; then
                 if [[ -e "$DLI_SS/$ROM_BN-image.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$DLI_SS/$ROM_BN-image.png" &> /dev/null
@@ -1172,7 +1167,6 @@ function ogst_emu() {
                 fi
             fi
         fi
-        
         #debugging
         #echo "ogst_emu"
     done
