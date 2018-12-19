@@ -1113,7 +1113,7 @@ function ogst_emu() {
         if ! lsmod | grep -q 'fbtft_device'; then
             sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
             if [[ -e "$HOME/scripts/ogst001" ]]; then
-                if [[ -e "$OGST_1/system-$SYSTEM.png" ]]; then
+                if [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
