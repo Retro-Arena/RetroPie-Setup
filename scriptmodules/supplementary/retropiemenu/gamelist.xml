@@ -1,0 +1,121 @@
+<?xml version="1.0"?>
+<gameList>
+	<game>
+		<path>./bezelproject.sh</path>
+		<name>Bezel Project</name>
+		<desc>This utility will provide a downloader for Retroarach system bezel packs to be used for various systems within RetroPie. This utility provides a download for a bezel pack for a system and includes a PNG bezel file for every ROM for that system. The download will also include the necessary configuration files needed for Retroarch to show them. The script will also update the required retroarch.cfg files for the emulators located in the /opt/retropie/configs directory. These changes are necessary to show the PNG bezels with an opacity of 1. Periodically, new bezel packs are completed and you will need to run the script updater to download the newest version to see these additional packs.</desc>
+		<image>./icons/bezelproject.png</image>
+	</game>
+	<game>
+		<path>./bluetooth.rp</path>
+		<name>Bluetooth</name>
+		<desc>Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.</desc>
+		<image>./icons/bluetooth.png</image>
+	</game>
+	<game>
+		<path>./configedit.rp</path>
+		<name>Configuration Editor</name>
+		<desc>Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.</desc>
+		<image>./icons/configedit.png</image>
+	</game>
+	<game>
+		<path>./reset-controllers.sh</path>
+		<name>Controller Reset</name>
+		<desc>This will wipe out all controller configurations, and reset everything to factory default. NOTE: this will cause your system to REBOOT.</desc>
+		<image>./icons/controllerreset.png</image>
+	</game>
+	<game>
+		<path>./fan1-default.sh</path>
+		<name>Fan Control 1 - Default</name>
+		<desc>To restore the fan to the factory Odroid settings select this option.</desc>
+		<image>./icons/fandefaultrate.png</image>
+	</game>
+	<game>
+		<path>./fan2-medium.sh</path>
+		<name>Fan Control 2 - Medium</name>
+		<desc>To update the fan to the HIGHER COOLING RATE the factory Odroid settings select this option. DISCLAIMER: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
+		<image>./icons/fanmediumrate.png</image>
+	</game>
+	<game>
+		<path>./fan3-aggressive.sh</path>
+		<name>Fan Control 3 - Aggressive</name>
+		<desc>To update the fan to the most AGGRESSIVE COOLING RATE compared to the factory Odroid settings select this option. The fan will become noticeably loud. DISCLAIMER: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
+		<image>./icons/fanaggressiverate.png</image>
+	</game>
+	<game>
+		<path>./filemanager.rp</path>
+		<name>File Manager</name>
+		<desc>Basic ascii file manager for linux allowing you to browse, copy, delete, and move files. NOTE: requires a keyboard to be connected.</desc>
+		<image>./icons/filemanager.png</image>
+	</game>
+	<game>
+		<path>./retroarch.rp</path>
+		<name>RetroArch</name>
+		<desc>Launches the RetroArch GUI so you can change RetroArch options. NOTE: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.</desc>
+		<image>./icons/retroarch.png</image>
+	</game>
+	<game>
+		<path>./retronetplay.rp</path>
+		<name>RetroArch Net Play</name>
+		<desc>Set up RetroArch Netplay options, choose host or client, port, host IP, delay frames, and your nickname.</desc>
+		<image>./icons/retronetplay.png</image>
+	</game>
+	<game>
+		<path>./runcommand.rp</path>
+		<name>Run Command Configuration</name>
+		<desc>Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.</desc>
+		<image>./icons/runcommand.png</image>
+	</game>
+	<game>
+		<path>./showip.rp</path>
+		<name>Show IP</name>
+		<desc>Displays your current IP address, as well as other information provided by the command, "ip addr show."</desc>
+		<image>./icons/showip.png</image>
+	</game>
+	<game>
+		<path>./splashscreen.rp</path>
+		<name>Splash Screens</name>
+		<desc>Enable or disable the splashscreen on RetroPie boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.</desc>
+		<image>./icons/splashscreen.png</image>
+	</game>
+	<game>
+		<path>./esthemes.rp</path>
+		<name>ES Themes</name>
+		<desc>Install, uninstall, or update EmulationStation themes. Most themes can be previewed at https://github.com/retropie/ RetroPie-Setup/wiki/themes.</desc>
+		<image>./icons/esthemes.png</image>
+		<playcount>1</playcount>
+		<lastplayed>20180925T235335</lastplayed>
+	</game>
+	<game>
+		<path>./rpsetup.rp</path>
+		<name>RetroPie Setup</name>
+		<desc>Install RetroPie from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other RetroPie-related configurations.</desc>
+		<image>./icons/rpsetup.png</image>
+		<playcount>1</playcount>
+		<lastplayed>20180926T001016</lastplayed>
+	</game>
+	<game>
+		<path>./softreboot.sh</path>
+		<name>Soft Reboot</name>
+		<desc>Perform a soft reboot to recover local keyboard function if not functional. NOTE: Typically only needed after exit from PSP games and there is a need to access the terminal by exit from EmulationStation.</desc>
+		<image>./icons/softreboot.png</image>
+	</game>
+	<game>
+		<path>./systeminfo.sh</path>
+		<name>System Info Utility</name>
+		<desc>View your CPU temps, IP connectivity, and storage to include external storage addons.</desc>
+		<image>./icons/systeminfo.png</image>
+	</game>
+	<game>
+		<path>./toggle-bgm.sh</path>
+		<name>Toggle BGM</name>
+		<desc>Enable or disable the background music feature.</desc>
+		<image>./icons/togglebgm.png</image>
+	</game>
+	<game>
+		<path>./wifi.sh</path>
+		<name>Wi-Fi Setup</name>
+		<desc>Connect to a wireless network. NOTE: requires a keyboard to be connected.</desc>
+		<image>./icons/wifi.png</image>
+	</game>
+</gameList>

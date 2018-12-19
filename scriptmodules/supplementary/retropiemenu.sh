@@ -28,9 +28,10 @@ function depends_retropiemenu() {
 }
 
 function install_bin_retropiemenu() {
-wget -O /usr/bin/odroid-config https://raw.githubusercontent.com/sikotik/odroid-config/master/odroid-config
-	wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh
-	chmod a+X /usr/bin/init_resize.sh && chmod a+x /usr/bin/odroid-config
+    cp -R $home/RetroPie-Setup/scriptmodules/supplementary/retropiemenu/. $home/RetroPie/retropiemenu/
+    wget -O /usr/bin/odroid-config https://raw.githubusercontent.com/sikotik/odroid-config/master/odroid-config
+    wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh
+    chmod a+X /usr/bin/init_resize.sh && chmod a+x /usr/bin/odroid-config
     return
 }
 
