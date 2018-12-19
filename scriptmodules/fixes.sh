@@ -43,5 +43,6 @@ if [[ ! -f /home/pigaming/scripts/update006 ]]; then
     cd /home/pigaming/.emulationstation/ogst_themes/
     sudo git clone https://github.com/Retro-Arena/ogst-retroarena
     sudo chown -R pigaming:pigaming /home/pigaming/.emulationstation/ogst_themes/
+    sudo chown -R pigaming:pigaming /home/pigaming/.emulationstation/ogst_themes/ogst-retroarena/
     touch /home/pigaming/scripts/update006
 fi
