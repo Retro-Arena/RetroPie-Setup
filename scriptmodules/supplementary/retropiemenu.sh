@@ -59,7 +59,7 @@ function configure_retropiemenu()
         'runcommand'
         'showip'
         'splashscreen'
-        'wifi'
+        'wifi.sh'
     )
 
     local names=(
