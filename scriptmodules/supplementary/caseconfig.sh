@@ -13,12 +13,12 @@ rp_module_section="config"
 function gui_caseconfig() {
     local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Configuration" 22 86 16)
     local options=(
-        1 "System Only .emulationstation/ogst_themes/TheRA-v1/$SYSTEM.png"
-        2 "Skyscraper  roms/system/media/marquees/$ROM.png"
-        3 "Skyscraper  roms/system/media/screenshots/$ROM.png"
-        4 "Standard    roms/system/marquees/$ROM.png"
-        5 "Standard    roms/system/screenshots/$ROM.png"
-        6 "ES Scaper   .emulationstation/downloaded_images/system/$ROM-image.png"
+        1 "Default     console system images only"
+        2 "Skyscraper  ~/roms/system/media/marquees/ROM.png"
+        3 "Skyscraper  ~/roms/system/media/screenshots/ROM.png"
+        4 "Standard    ~/roms/system/marquees/ROM.png"
+        5 "Standard    ~/roms/system/screenshots/ROM.png"
+        6 "ES Scaper   ~/.emulationstation/downloaded_images/system/ROM-image.png"
     )
     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
     if [[ -n "$choice" ]]; then
