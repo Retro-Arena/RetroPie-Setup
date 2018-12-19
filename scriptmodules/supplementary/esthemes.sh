@@ -28,11 +28,11 @@ function install_theme_esthemes() {
         repo="Retro-Arena"
     fi
     if [[ -z "$theme" ]]; then
-        theme="es-showcase"
+        theme="showcase"
         repo="Retro-Arena"
     fi
     mkdir -p "/etc/emulationstation/themes"
-    gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/$repo/$theme.git"
+    gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/$repo/es-$theme.git"
 }
 
 function uninstall_theme_esthemes() {
@@ -44,8 +44,8 @@ function uninstall_theme_esthemes() {
 
 function gui_esthemes() {
     local themes=(
-        'Retro-Arena es-showcase'
-        'Retro-Arena es-unified'
+        'Retro-Arena showcase'
+        'Retro-Arena unified'
     )
     while true; do
         local theme
