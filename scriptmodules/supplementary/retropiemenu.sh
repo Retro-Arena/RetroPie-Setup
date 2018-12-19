@@ -71,7 +71,7 @@ function configure_retropiemenu()
         'Odroid-Config'
         'Retroarch'
         'RetroArch Net Play'
-        'RetroPie Setup'
+        'TheRA-Setup'
         'Run Command Configuration'
         'Show IP'
         'Splash Screens'
