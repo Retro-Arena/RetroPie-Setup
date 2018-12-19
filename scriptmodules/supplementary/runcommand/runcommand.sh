@@ -1121,6 +1121,8 @@ function ogst_emu() {
             if [[ -e "$HOME/scripts/ogst001" ]]; then
                 if [[ -e "$OGST_1/system-$SYSTEM.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_1/system-$SYSTEM.png" &> /dev/null
+                elif [[ -e "$OGST_1/default.png" ]]; then
+                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_1/default.png" &> /dev/null
                 elif [[ -e "$OGST_2/system-$SYSTEM.png" ]]; then
                     sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_2/system-$SYSTEM.png" &> /dev/null
                 else
