@@ -48,7 +48,6 @@ function configure_retropiemenu()
 
     # add the gameslist / icons
     local files=(
-        'audiosettings'
         'bluetooth'
         'configedit'
         'esthemes'
@@ -63,7 +62,6 @@ function configure_retropiemenu()
     )
 
     local names=(
-        'Audio'
         'Bluetooth'
         'Configuration Editor'
         'ES Themes'
@@ -78,7 +76,6 @@ function configure_retropiemenu()
     )
 
     local descs=(
-        'Configure audio settings. Choose default of auto, 3.5mm jack, or HDMI. Mixer controls, and apply default settings.'
         'Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.'
         'Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.'
         'Install, uninstall, or update EmulationStation themes. Most themes can be previewed at https://github.com/retropie/ RetroPie-Setup/wiki/themes.'
