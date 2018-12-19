@@ -1101,7 +1101,7 @@ function ogst_emu() {
         sleep 1
     done
 
-    OGST="$HOME/.emulationstation/ogst_themes/TheRA-v1"
+    OGST="$HOME/.emulationstation/ogst_themes/ogst-retroarena"
     SKY_MQ="$HOME/RetroPie/roms/$SYSTEM/media/marquees"
     SKY_SS="$HOME/RetroPie/roms/$SYSTEM/media/screenshots"
     STD_MQ="$HOME/RetroPie/roms/$SYSTEM/marquees"
