@@ -1101,8 +1101,7 @@ function ogst_emu() {
         sleep 1
     done
 
-    OGST_1="$HOME/ogst"
-    OGST_2=".emulationstation/ogst_themes/TheRA-v1"
+    OGST="$HOME/.emulationstation/ogst_themes/TheRA-v1"
     SKY_MQ="$HOME/RetroPie/roms/$SYSTEM/media/marquees"
     SKY_SS="$HOME/RetroPie/roms/$SYSTEM/media/screenshots"
     STD_MQ="$HOME/RetroPie/roms/$SYSTEM/marquees"
@@ -1115,13 +1114,9 @@ function ogst_emu() {
             sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
             if [[ -e "$HOME/scripts/ogst001" ]]; then
                 if [[ -e "$OGST_1/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_1/system-$SYSTEM.png" &> /dev/null
-                elif [[ -e "$OGST_1/default.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_1/default.png" &> /dev/null
-                elif [[ -e "$OGST_2/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_2/system-$SYSTEM.png" &> /dev/null
+                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_2/default.png" &> /dev/null
+                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst002" ]]; then
@@ -1169,16 +1164,10 @@ function ogst_emu() {
     done
 
     if lsmod | grep -q 'fbtft_device'; then
-        if [[ -e "$OGST_1/default.png" ]]; then
-            sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_1/es.png" &> /dev/null
-        else
-            sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_2/es.png" &> /dev/null
+        sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/es.png" &> /dev/null
     else
         sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
-        if [[ -e "$OGST_1/default.png" ]]; then
-            sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_1/es.png" &> /dev/null
-        else
-            sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST_2/es.png" &> /dev/null
+        sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/es.png" &> /dev/null
     fi
 }
 

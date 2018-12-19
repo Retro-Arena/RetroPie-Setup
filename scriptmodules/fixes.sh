@@ -36,3 +36,11 @@ if [[ ! -f /home/pigaming/scripts/update005 ]]; then
     #deprecated
     touch /home/pigaming/scripts/update005
 fi
+
+if [[ ! -f /home/pigaming/scripts/update006 ]]; then
+    rm -rf /home/pigaming/ogst
+    mkdir /home/pigaming/.emulationstation/ogst_themes/
+    cd /home/pigaming/.emulationstation/ogst_themes/
+    gitPullOrClone https://github.com/Retro-Arena/ogst-retroarena
+    touch /home/pigaming/scripts/update006
+fi
