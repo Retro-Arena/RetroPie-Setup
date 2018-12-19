@@ -59,7 +59,6 @@ function configure_retropiemenu()
         'runcommand'
         'showip'
         'splashscreen'
-        'wifi.sh'
     )
 
     local names=(
@@ -75,7 +74,6 @@ function configure_retropiemenu()
         'Run Command Configuration'
         'Show IP'
         'Splash Screens'
-        'WiFi'
     )
 
     local descs=(
@@ -91,7 +89,6 @@ function configure_retropiemenu()
         'Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.'
         'Displays your current IP address, as well as other information provided by the command, "ip addr show."'
         'Enable or disable the splashscreen on RetroPie boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.'
-        'Connect to or disconnect from a wifi network and configure wifi settings.'
     )
 
     setESSystem "RetroPie" "retropie" "$rpdir" ".rp .sh" "sudo $scriptdir/retropie_packages.sh retropiemenu launch %ROM% </dev/tty >/dev/tty" "" "retropie"
