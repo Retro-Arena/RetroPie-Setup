@@ -101,7 +101,7 @@ function gui_esthemes() {
                             fi
                             ;;
                         2)
-                            gitPullOrClone "$gallerydir" "https://github.com/wetriner/es-theme-gallery"
+                            gitPullOrClone "$gallerydir" "https://github.com/Retro-Arena/es-theme-gallery"
                             ;;
                         3)
                             if [[ -d "$gallerydir" ]]; then
@@ -110,7 +110,7 @@ function gui_esthemes() {
                             ;;
                     esac
                 else
-                    gitPullOrClone "$gallerydir" "http://github.com/wetriner/es-theme-gallery"
+                    gitPullOrClone "$gallerydir" "http://github.com/Retro-Arena/es-theme-gallery"
                 fi
                 ;;
             U)
