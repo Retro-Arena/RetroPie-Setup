@@ -45,6 +45,7 @@ if [[ ! -f /home/pigaming/scripts/update006 ]]; then
     sudo chown -R pigaming:pigaming /home/pigaming/.emulationstation/ogst_themes/
     sudo chown -R pigaming:pigaming /home/pigaming/.emulationstation/ogst_themes/ogst-retroarena/
     touch /home/pigaming/scripts/update006
+    touch /home/pigaming/scripts/ogst001
 fi
 
 if [[ ! -f /home/pigaming/scripts/update007 ]]; then

@@ -37,7 +37,6 @@ function install_bin_retropiemenu() {
         wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh
         chmod a+X /usr/bin/init_resize.sh && chmod a+x /usr/bin/odroid-config
         touch /home/pigaming/scripts/update007
-        touch /home/pigaming/scripts/ogst001
     fi
     return
 }
@@ -85,7 +84,7 @@ function configure_retropiemenu()
         'Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.'
         'Install, uninstall, or update EmulationStation themes. Most themes can be previewed at https://github.com/retropie/ RetroPie-Setup/wiki/themes.'
         'Basic ascii file manager for linux allowing you to browse, copy, delete, and move files.'
-        'Change user password, boot options, internationalization, camera, add your pi to Rastrack, overclock, overscan, memory split, SSH and more.'
+        'OS and Hardware configurations such as: User Password, Boot Options, Internationalization, SSH, etc. CAUTION: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup your image!'
         'Launches the RetroArch GUI so you can change RetroArch options. Note: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.'
         'Install TheRA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.'
         'Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.'
