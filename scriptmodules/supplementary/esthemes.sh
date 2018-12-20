@@ -46,6 +46,7 @@ function gui_esthemes() {
     local themes=(
         'Retro-Arena showcase'
         'Retro-Arena unified'
+        'Retro-Arena ghc'
     )
     while true; do
         local theme
