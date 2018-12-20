@@ -14,12 +14,12 @@ function gui_caseconfig() {
     local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Configuration" 22 86 16)
     local options=(
         1 "Console System          default"
-        2 "Hyperspin Boxart        roms/system/boxart/ROM.png"
-        3 "Hyperspin Cartart       roms/system/cartart/ROM.png"
-        4 "Hyperspin Snap          roms/system/snap/ROM.png"
-        5 "Hyperspin Wheel         roms/system/wheel/ROM.png"
-        6 "Skyscraper Marquee      roms/system/media/marquees/ROM.png"
-        7 "Skyscraper Screenshot   roms/system/media/screenshots/ROM.png"
+        2 "Motion Blue Boxart      roms/system/boxart/ROM.png"
+        3 "Motion Blue Cartart     roms/system/cartart/ROM.png"
+        4 "Motion Blue Snap        roms/system/snap/ROM.png"
+        5 "Motion Blue Wheel       roms/system/wheel/ROM.png"
+        6 "Skyscraper Marquees     roms/system/media/marquees/ROM.png"
+        7 "Skyscraper Screenshots  roms/system/media/screenshots/ROM.png"
         8 "ES Scaper               .emulationstation/downloaded_images/system/ROM-image.png"
     )
     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
