@@ -57,7 +57,7 @@
 	<game>
 		<path>./odroidconfig.rp</path>
 		<name>Odroid Config</name>
-		<desc>Change user password, boot options, internationalization, camera, add your pi to Rastrack, overclock, overscan, memory split, SSH and more.</desc>
+		<desc>OS and Hardware configurations such as: User Password, Boot Options, Internationalization, SSH, etc. CAUTION: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup your image!</desc>
 		<image>./icons/odroidconfig.png</image>
 	</game>
 	<game>
