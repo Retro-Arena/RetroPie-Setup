@@ -66,8 +66,8 @@ function gui_samba() {
     while true; do
         local cmd=(dialog --backtitle "$__backtitle" --menu "Choose an option" 22 76 16)
         local options=(
-            1 "Install RetroPie Samba shares"
-            2 "Remove RetroPie Samba shares"
+            1 "Install  TheRA Samba shares"
+            2 "Remove  TheRA Samba shares"
             3 "Manually edit /etc/samba/smb.conf"
             4 "Restart Samba service"
             5 "Remove Samba + configuration"
