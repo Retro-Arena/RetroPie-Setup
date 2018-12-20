@@ -33,7 +33,7 @@ if [[ ! -f /home/pigaming/scripts/update004 ]]; then
 fi
 
 if [[ ! -f /home/pigaming/scripts/update005 ]]; then
-    #deprecated
+    # deprecated
     touch /home/pigaming/scripts/update005
 fi
 
@@ -45,4 +45,8 @@ if [[ ! -f /home/pigaming/scripts/update006 ]]; then
     sudo chown -R pigaming:pigaming /home/pigaming/.emulationstation/ogst_themes/
     sudo chown -R pigaming:pigaming /home/pigaming/.emulationstation/ogst_themes/ogst-retroarena/
     touch /home/pigaming/scripts/update006
+fi
+
+if [[ ! -f /home/pigaming/scripts/update007 ]]; then
+    # update007 used by retropiemenu.sh
 fi

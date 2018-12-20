@@ -13,12 +13,14 @@ rp_module_section="config"
 function gui_caseconfig() {
     local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Configuration" 22 86 16)
     local options=(
-        1 "Default     console system images only"
-        2 "Skyscraper  ~/roms/system/media/marquees/ROM.png"
-        3 "Skyscraper  ~/roms/system/media/screenshots/ROM.png"
-        4 "Standard    ~/roms/system/marquees/ROM.png"
-        5 "Standard    ~/roms/system/screenshots/ROM.png"
-        6 "ES Scaper   ~/.emulationstation/downloaded_images/system/ROM-image.png"
+        1 "Console System          default"
+        2 "Hyperspin Boxart        roms/system/boxart/ROM.png"
+        3 "Hyperspin Cartart       roms/system/cartart/ROM.png"
+        4 "Hyperspin Snap          roms/system/snap/ROM.png"
+        5 "Hyperspin Wheel         roms/system/wheel/ROM.png"
+        6 "Skyscraper Marquee      roms/system/media/marquees/ROM.png"
+        7 "Skyscraper Screenshot   roms/system/media/screenshots/ROM.png"
+        8 "ES Scaper               .emulationstation/downloaded_images/system/ROM-image.png"
     )
     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
     if [[ -n "$choice" ]]; then
@@ -52,6 +54,16 @@ function gui_caseconfig() {
                 rm -rf $HOME/scripts/ogst*
                 touch $HOME/scripts/ogst006
                 printMsgs "dialog" "Option 6 Activated"
+                ;;
+            7)
+                rm -rf $HOME/scripts/ogst*
+                touch $HOME/scripts/ogst007
+                printMsgs "dialog" "Option 7 Activated"
+                ;;
+            8)
+                rm -rf $HOME/scripts/ogst*
+                touch $HOME/scripts/ogst008
+                printMsgs "dialog" "Option 8 Activated"
                 ;;
         esac
     fi

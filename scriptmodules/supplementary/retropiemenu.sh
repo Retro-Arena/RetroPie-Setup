@@ -28,10 +28,17 @@ function depends_retropiemenu() {
 }
 
 function install_bin_retropiemenu() {
-    #cp -R $home/RetroPie-Setup/scriptmodules/supplementary/retropiemenu/. $home/RetroPie/retropiemenu/
-    wget -O /usr/bin/odroid-config https://raw.githubusercontent.com/sikotik/odroid-config/master/odroid-config
-    wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh
-    chmod a+X /usr/bin/init_resize.sh && chmod a+x /usr/bin/odroid-config
+    if [[ ! -f /home/pigaming/scripts/update007 ]]; then
+        cp -r $HOME/fan/original $HOME/scripts/fan1-default
+        cp -r $HOME/fan/cool-mode $HOME/scripts/fan2-medium
+        cp -r $HOME/fan/aggressive $HOME/scripts/fan3-aggressive
+        rm -rf $HOME/fan
+        wget -O /usr/bin/odroid-config https://raw.githubusercontent.com/sikotik/odroid-config/master/odroid-config
+        wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh
+        chmod a+X /usr/bin/init_resize.sh && chmod a+x /usr/bin/odroid-config
+        touch /home/pigaming/scripts/update007
+        touch /home/pigaming/scripts/ogst001
+    fi
     return
 }
 
@@ -41,7 +48,7 @@ function configure_retropiemenu()
 
     local rpdir="$home/RetroPie/retropiemenu"
     mkdir -p "$rpdir"
-    cp -R "$md_data/." "$rpdir/"
+    cp -r "$md_data/." "$rpdir/"
     chown -R $user:$user "$rpdir"
 
     isPlatform "mali" && rm -f "$rpdir/dispmanx.rp"
@@ -114,6 +121,8 @@ function configure_retropiemenu()
             "$function" "retropie" "RetroPie" "$file.rp" "$name" "$desc" "$image"
         done
     done
+    
+    #update gamelist
     cp -p "$rpdir/gamelist.xml" "$home/.emulationstation/gamelists/retropie/gamelist.xml"
 }
 
