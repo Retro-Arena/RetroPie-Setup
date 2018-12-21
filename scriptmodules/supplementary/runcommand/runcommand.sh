@@ -1116,74 +1116,74 @@ function ogst_emu() {
             sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
             if [[ -e "$HOME/scripts/ogst001" ]]; then
                 if [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst002" ]]; then
                 if [[ -e "$HYP_BA/$ROM_BN.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$HYP_BA/$ROM_BN.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$HYP_BA/$ROM_BN.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst003" ]]; then
                 if [[ -e "$HYP_CA/$ROM_BN.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$HYP_CA/$ROM_BN.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$HYP_CA/$ROM_BN.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst004" ]]; then
                 if [[ -e "$HYP_SP/$ROM_BN.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$HYP_SP/$ROM_BN.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$HYP_SP/$ROM_BN.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst005" ]]; then
                 if [[ -e "$HYP_WL/$ROM_BN.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$HYP_WL/$ROM_BN.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$HYP_WL/$ROM_BN.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst006" ]]; then
                 if [[ -e "$SKY_MQ/$ROM_BN.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SKY_MQ/$ROM_BN.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$SKY_MQ/$ROM_BN.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst007" ]]; then
                 if [[ -e "$SKY_SS/$ROM_BN.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$SKY_SS/$ROM_BN.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$SKY_SS/$ROM_BN.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst008" ]]; then
                 if [[ -e "$DLI_SS/$ROM_BN-image.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$DLI_SS/$ROM_BN-image.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$DLI_SS/$ROM_BN-image.png" &> /dev/null
                 elif [[ -e "$DLI_SS/$ROM_BN.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$DLI_SS/$ROM_BN.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$DLI_SS/$ROM_BN.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/system-$SYSTEM.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
-                    sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/default.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
                 fi
             fi
         fi
@@ -1194,10 +1194,10 @@ function ogst_emu() {
     done
 
     if lsmod | grep -q 'fbtft_device'; then
-        sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/es.png" &> /dev/null
+        mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/es.png" &> /dev/null
     else
         sudo modprobe fbtft_device name=hktft9340 busnum=1 rotate=270 &> /dev/null
-        sudo mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale=320:240 "$OGST/es.png" &> /dev/null
+        mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/es.png" &> /dev/null
     fi
 }
 
