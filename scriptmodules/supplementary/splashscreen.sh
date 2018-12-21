@@ -113,7 +113,7 @@ function remove_splashscreen() {
 
 function choose_path_splashscreen() {
     local options=(
-        1 " TheRA splashscreens"
+        1 "TheRA splashscreens"
         2 "Own/Extra splashscreens (from $datadir/splashscreens)"
     )
     local cmd=(dialog --backtitle "$__backtitle" --menu "Choose an option." 22 86 16)
@@ -173,7 +173,7 @@ function choose_splashscreen() {
 
 function randomize_splashscreen() {
     options=(
-        1 "Randomize  TheRA splashscreens"
+        1 "Randomize TheRA splashscreens"
         2 "Randomize own splashscreens (from $datadir/splashscreens)"
         3 "Randomize all splashscreens"
         4 "Randomize /etc/splashscreen.list"
@@ -183,7 +183,7 @@ function randomize_splashscreen() {
     iniConfig "=" '"' "$md_inst/asplashscreen.sh"
     case "$choice" in
         1)
-            iniSet "RANDOMIZE" " TheRA"
+            iniSet "RANDOMIZE" "TheRA"
             printMsgs "dialog" "Splashscreen randomizer enabled in directory $path"
             ;;
         2)
@@ -279,7 +279,7 @@ function gui_splashscreen() {
             5 "Manually edit splashscreen list"
             6 "Append splashscreen to list (for multiple entries)"
             7 "Preview splashscreens"
-            8 "Update  TheRA splashscreens"
+            8 "Update TheRA splashscreens"
             9 "Download RetroPie-Extra splashscreens"
         )
         local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
