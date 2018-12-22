@@ -20,7 +20,9 @@ function gui_caseconfig() {
         5 "Motion Blue Wheel       roms/system/wheel/ROM.png"
         6 "Skyscraper Marquees     roms/system/media/marquees/ROM.png"
         7 "Skyscraper Screenshots  roms/system/media/screenshots/ROM.png"
-        8 "ES Scaper               .emulationstation/downloaded_images/system/ROM-image.png"
+        8 "Skraper Marquees        roms/system/media/marquee/ROM.png"
+        9 "Skkraer Screenshots     roms/system/media/images/ROM.png"
+        10 "ES Scaper               .emulationstation/downloaded_images/system/ROM-image.png"
     )
     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
     if [[ -n "$choice" ]]; then
@@ -61,6 +63,16 @@ function gui_caseconfig() {
                 printMsgs "dialog" "Option 7 Activated"
                 ;;
             8)
+                rm -rf $HOME/scripts/ogst*
+                touch $HOME/scripts/ogst008
+                printMsgs "dialog" "Option 8 Activated"
+                ;;
+            9)
+                rm -rf $HOME/scripts/ogst*
+                touch $HOME/scripts/ogst009
+                printMsgs "dialog" "Option 9 Activated"
+                ;;
+            10)
                 rm -rf $HOME/scripts/ogst*
                 touch $HOME/scripts/ogst008
                 printMsgs "dialog" "Option 8 Activated"
