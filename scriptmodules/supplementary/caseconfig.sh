@@ -23,7 +23,7 @@ function gui_caseconfig() {
         8 "Skraper Marquee        roms/system/media/marquee/ROM.png"
         9 "Skraper Screenshot     roms/system/media/images/ROM.png"
         10 "Selph's Marquee       roms/system/images/ROM-marquee.png"
-        11 "Selph's Screenshot    roms/system/images/ROM-image.jpg"
+        11 "Selph's Screenshot    roms/system/images/ROM-image.png"
     )
     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
     if [[ -n "$choice" ]]; then
