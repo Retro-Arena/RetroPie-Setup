@@ -1197,8 +1197,8 @@ function ogst_emu() {
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst010" ]]; then
-                if [[ -e "$SLP_MQ/$ROM_BN-image.jpg" ]]; then
-                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 300 "$SLP_MQ/$ROM_BN-image.jpg" &> /dev/null
+                if [[ -e "$SLP_MQ/$ROM_BN-marquee.png" ]]; then
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 300 "$SLP_MQ/$ROM_BN-marquee.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                     mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
@@ -1206,8 +1206,8 @@ function ogst_emu() {
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst011" ]]; then
-                if [[ -e "$SLP_SS/$ROM_BN-marquee.png" ]]; then
-                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$SLP_SS/$ROM_BN-marquee.png" &> /dev/null
+                if [[ -e "$SLP_SS/$ROM_BN-image.jpg" ]]; then
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$SLP_SS/$ROM_BN-image.jpg" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                     mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
