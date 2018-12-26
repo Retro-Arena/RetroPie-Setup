@@ -1207,7 +1207,7 @@ function ogst_emu() {
             fi
             if [[ -e "$HOME/scripts/ogst011" ]]; then
                 if [[ -e "$SLP_SS/$ROM_BN-marquee.png" ]]; then
-                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$SLP_MQ/$ROM_BN-marquee.png" &> /dev/null
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$SLP_SS/$ROM_BN-marquee.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                     mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else
