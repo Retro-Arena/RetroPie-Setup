@@ -1110,7 +1110,8 @@ function ogst_emu() {
     SKY_SS="$HOME/RetroPie/roms/$SYSTEM/media/screenshots"
     SKP_MQ="$HOME/RetroPie/roms/$SYSTEM/media/marquee"
     SKP_SS="$HOME/RetroPie/roms/$SYSTEM/media/images"
-    DLI_SS="$HOME/.emulationstation/downloaded_images/$SYSTEM"
+    SLP_MQ="$HOME/RetroPie/roms/$SYSTEM/images"
+    SLP_SS="$HOME/RetroPie/roms/$SYSTEM/images"
 
     for pid in $pids; do
         sleep 3
@@ -1196,8 +1197,17 @@ function ogst_emu() {
                 fi
             fi
             if [[ -e "$HOME/scripts/ogst010" ]]; then
-                if [[ -e "$DLI_SS/$ROM_BN-image.png" ]]; then
-                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$DLI_SS/$ROM_BN-image.png" &> /dev/null
+                if [[ -e "$SLP_MQ/$ROM_BN-image.jpg" ]]; then
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 300 "$SLP_MQ/$ROM_BN-image.jpg" &> /dev/null
+                elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
+                else
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/default.png" &> /dev/null
+                fi
+            fi
+            if [[ -e "$HOME/scripts/ogst011" ]]; then
+                if [[ -e "$SLP_SS/$ROM_BN-marquee.png" ]]; then
+                    mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$SLP_MQ/$ROM_BN-marquee.png" &> /dev/null
                 elif  [[ -e "$OGST/system-$SYSTEM.png" ]]; then
                     mplayer -quiet -nolirc -nosound -vo fbdev2:/dev/fb1 -vf scale -zoom -xy 320 "$OGST/system-$SYSTEM.png" &> /dev/null
                 else

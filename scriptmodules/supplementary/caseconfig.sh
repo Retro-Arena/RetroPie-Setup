@@ -13,16 +13,17 @@ rp_module_section="config"
 function gui_caseconfig() {
     local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Configuration" 22 86 16)
     local options=(
-        1 "Console System          default"
-        2 "Motion Blue Boxart      roms/system/boxart/ROM.png"
-        3 "Motion Blue Cartart     roms/system/cartart/ROM.png"
-        4 "Motion Blue Snap        roms/system/snap/ROM.png"
-        5 "Motion Blue Wheel       roms/system/wheel/ROM.png"
-        6 "Skyscraper Marquees     roms/system/media/marquees/ROM.png"
-        7 "Skyscraper Screenshots  roms/system/media/screenshots/ROM.png"
-        8 "Skraper Marquees        roms/system/media/marquee/ROM.png"
-        9 "Skraper Screenshots     roms/system/media/images/ROM.png"
-        10 "ES Scaper               .emulationstation/downloaded_images/system/ROM-image.png"
+        1 "Console System         default"
+        2 "Motion Blue Boxart     roms/system/boxart/ROM.png"
+        3 "Motion Blue Cartart    roms/system/cartart/ROM.png"
+        4 "Motion Blue Snap       roms/system/snap/ROM.png"
+        5 "Motion Blue Wheel      roms/system/wheel/ROM.png"
+        6 "Skyscraper Marquee     roms/system/media/marquees/ROM.png"
+        7 "Skyscraper Screenshot  roms/system/media/screenshots/ROM.png"
+        8 "Skraper Marquee        roms/system/media/marquee/ROM.png"
+        9 "Skraper Screenshot     roms/system/media/images/ROM.png"
+        10 "Selph's Marquee       roms/system/images/ROM-marquee.png"
+        11 "Selph's Screenshot    roms/system/images/ROM-image.jpg"
     )
     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
     if [[ -n "$choice" ]]; then
@@ -76,6 +77,11 @@ function gui_caseconfig() {
                 rm -rf $HOME/scripts/ogst*
                 touch $HOME/scripts/ogst010
                 printMsgs "dialog" "Option 10 Activated"
+                ;;
+            11)
+                rm -rf $HOME/scripts/ogst*
+                touch $HOME/scripts/ogst011
+                printMsgs "dialog" "Option 11 Activated"
                 ;;
         esac
     fi
