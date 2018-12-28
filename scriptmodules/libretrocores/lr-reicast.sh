@@ -11,7 +11,8 @@
 
 rp_module_id="lr-reicast"
 rp_module_desc="Dreamcast emu - Reicast port for libretro"
-rp_module_help="Dreamcast ROM Extensions: .cdi .chd .gdi\n\nCopy Dreamcast roms to $romdir/dreamcast\n\nCopy dc_boot.bin and dc_flash.bin BIOS files to the internal SD card: $biosdir/dc\n\nAtomiswave and Naomi ROM Extensions: .zip from Mame 0.198 and above\n\nCopy your Atomiswave to $romdir/atomiswave\n\nCopy your Naomi roms to $romdir/naomi\n\nCopy airlbios.zip, awbios.zip, f355bios.zip, f355dlx.zip, hod2bios.zip, and naomi.zip from the Mame BIOS pack to the internal SD card: $biosdir/dc"
+rp_module_help="Dreamcast ROM Extensions: .cdi .gdi .chd (chdman v5)\n\nAtomiswave/Naomi ROM Extensions: .bin .dat .zip (Mame 0.198+)\n\nCopy required BIOS files $biosdir/dc\n\ndc_boot.bin, dc_flash.bin, airlbios.zip, awbios.zip, f355bios.zip, f355dlx.zip, hod2bios.zip, naomi.zip\n\nCheck http://bit.do/lr-reicast for more information."
+
 rp_module_licence="GPL2 https://raw.githubusercontent.com/libretro/reicast-emulator/master/LICENSE"
 rp_module_section="main"
 
