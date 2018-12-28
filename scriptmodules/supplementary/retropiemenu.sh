@@ -71,7 +71,7 @@ function configure_retropiemenu()
         'Bluetooth'
         'Configuration Editor'
         'ES Themes'
-        'Hursty\'s ES Themes'
+        'HurstyS ES Themes'
         'File Manager'
         'Odroid-Config'
         'Retroarch'
@@ -85,7 +85,7 @@ function configure_retropiemenu()
         'Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.'
         'Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.'
         'Install, uninstall, or update EmulationStation themes.'
-        'Install, uninstall, or update Hursty\'s ES themes.'
+        'Install, uninstall, or update HurstyS ES themes.'
         'Basic ascii file manager for linux allowing you to browse, copy, delete, and move files.'
         'OS and Hardware configurations such as: User Password, Boot Options, Internationalization, SSH, etc. CAUTION: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup your image!'
         'Launches the RetroArch GUI so you can change RetroArch options. Note: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.'
@@ -125,7 +125,7 @@ function configure_retropiemenu()
     done
     
     #update gamelist
-    cp -p "$rpdir/gamelist.xml" "$home/.emulationstation/gamelists/retropie/gamelist.xml"
+    cp -rf "$rpdir/gamelist.xml" "$home/.emulationstation/gamelists/retropie/gamelist.xml"
 }
 
 function remove_retropiemenu() {
