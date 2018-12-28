@@ -57,6 +57,7 @@ function configure_retropiemenu()
         'bluetooth'
         'configedit'
         'esthemes'
+        'hurstythemes'
         'filemanager'
         'odroidconfig'
         'retroarch'
