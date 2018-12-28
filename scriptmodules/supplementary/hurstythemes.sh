@@ -39,32 +39,6 @@ function uninstall_theme_hurstythemes() {
     fi
 }
 
-function disable_script() {
-dialog --infobox "...processing..." 3 20 ; sleep 2
-ifexist=`cat /opt/retropie/configs/all/autostart.sh |grep themerandom |wc -l`
-if [[ ${ifexist} > "0" ]]
-then
-  perl -pi -w -e 's/\/home\/pigaming\/scripts\/themerandom.sh/#\/home\/pigaming\/scripts\/themerandom.sh/g;' /opt/retropie/configs/all/autostart.sh
-fi
-sleep 2
-}
-
-function enable_script() {
-dialog --infobox "...processing..." 3 20 ; sleep 2
-ifexist=`cat /opt/retropie/configs/all/autostart.sh |grep themerandom |wc -l`
-if [[ ${ifexist} > "0" ]]
-then
-  perl -pi -w -e 's/#\/home\/pigaming\/scripts\/themerandom.sh/\/home\/pigaming\/scripts\/themerandom.sh/g;' /opt/retropie/configs/all/autostart.sh
-else
-  cp /opt/retropie/configs/all/autostart.sh /opt/retropie/configs/all/autostart.sh.bkp
-  echo "/home/pigaming/scripts/themerandom.sh" > /tmp/autostart.sh
-  cat /opt/retropie/configs/all/autostart.sh >> /tmp/autostart.sh
-  chmod 777 /tmp/autostart.sh
-  cp /tmp/autostart.sh /opt/retropie/configs/all
-fi
-sleep 2
-}
-
 function gui_hurstythemes() {
     local themes=(
         'RetroHursty69 AladdinSweet'
@@ -334,7 +308,6 @@ function gui_hurstythemes() {
         local status=()
         local default
 
-        options+=(U "Update install script - script will exit when updated")
         options+=(E "Enable ES bootup theme randomizer")
         options+=(D "Disable ES bootup theme randomizer")
 
@@ -358,29 +331,18 @@ function gui_hurstythemes() {
         default="$choice"
         [[ -z "$choice" ]] && break
         case "$choice" in
-            U)  #update install script to get new theme listings
-                cd "/home/pigaming/RetroPie/retropiemenu" 
-                mv "hurstythemes.sh" "hurstythemes.sh.bkp" 
-                wget "https://raw.githubusercontent.com/retrohursty69/HurstyThemes/master/hurstythemes.sh" 
-                if [[ -f "/home/pigaming/RetroPie/retropiemenu/hurstythemes.sh" ]]; then
-                  echo "/home/pigaming/RetroPie/retropiemenu/hurstythemes.sh" > /tmp/errorchecking
-                 else
-                  mv "hurstythemes.sh.bkp" "hurstythemes.sh"
-                fi
-                chmod 777 "hurstythemes.sh" 
-                exit
-                ;;
             E)  #enable ES bootup theme randomizer
-                enable_script
+                touch $HOME/scripts/themerandomizer001
+                printMsgs "dialog" "Theme Randomizer enabled"
                 ;;
             D)  #disable ES bootup theme randomizer
-                disable_script
+                rm -rf $HOME/scripts/themerandomizer001
+                printMsgs "dialog" "Theme Randomizer disabled"
                 ;;
             *)  #install or update themes
                 theme=(${themes[choice-1]})
                 repo="${theme[0]}"
                 theme="${theme[1]}"
-#                if [[ "${status[choice]}" == "i" ]]; then
                 if [[ -d "/etc/emulationstation/themes/$theme" ]]; then
                     options=(1 "Update $theme" 2 "Uninstall $theme")
                     cmd=(dialog --backtitle "$__backtitle" --menu "Choose an option for theme" 12 40 06)

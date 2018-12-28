@@ -48,7 +48,7 @@ fi
 # update007 used by retropiemenu.sh
 
 if [[ ! -f /home/pigaming/scripts/update008 ]]; then
-    wget -O /home/pigaming/scripts/themerandom.sh https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/themerandom.sh
-    dos2unix /home/pigaming/scripts/themerandom.sh
+    wget -O /opt/retropie/configs/all/autostart.sh https://raw.githubusercontent.com/Retro-Arena/xu4-bins/master/scripts/autostart.sh
+    dos2unix /opt/retropie/configs/all/autostart.sh
     touch /home/pigaming/scripts/update008
 fi
