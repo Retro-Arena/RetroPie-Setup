@@ -32,10 +32,7 @@ if [[ ! -f /home/pigaming/scripts/update004 ]]; then
     touch /home/pigaming/scripts/update004
 fi
 
-if [[ ! -f /home/pigaming/scripts/update005 ]]; then
-    # deprecated
-    touch /home/pigaming/scripts/update005
-fi
+# update005 deprecated
 
 if [[ ! -f /home/pigaming/scripts/update006 ]]; then
     rm -rf /home/pigaming/ogst
@@ -48,9 +45,7 @@ if [[ ! -f /home/pigaming/scripts/update006 ]]; then
     touch /home/pigaming/scripts/ogst001
 fi
 
-if [[ ! -f /home/pigaming/scripts/update007 ]]; then
-    # update007 used by retropiemenu.sh
-fi
+# update007 used by retropiemenu.sh
 
 if [[ ! -f /home/pigaming/scripts/update008 ]]; then
     wget -O /home/pigaming/scripts/themerandom.sh https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/themerandom.sh
