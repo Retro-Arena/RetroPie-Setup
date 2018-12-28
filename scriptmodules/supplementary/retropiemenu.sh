@@ -70,7 +70,7 @@ function configure_retropiemenu()
         'Bluetooth'
         'Configuration Editor'
         'ES Themes'
-        'Hursty Themes'
+        'Hursty\'s ES Themes'
         'File Manager'
         'Odroid-Config'
         'Retroarch'
