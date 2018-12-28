@@ -51,3 +51,9 @@ fi
 if [[ ! -f /home/pigaming/scripts/update007 ]]; then
     # update007 used by retropiemenu.sh
 fi
+
+if [[ ! -f /home/pigaming/scripts/update008 ]]; then
+    wget -O /home/pigaming/scripts/themerandom.sh https://raw.githubusercontent.com/RetroHursty69/HurstyThemes/master/themerandom.sh
+    dos2unix /home/pigaming/scripts/themerandom.sh
+    touch /home/pigaming/scripts/update008
+fi
