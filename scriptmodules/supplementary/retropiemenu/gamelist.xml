@@ -92,12 +92,12 @@ CAUTION: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup y
 		<desc>Install, uninstall, or update EmulationStation themes.</desc>
 		<image>./icons/esthemes.png</image>
 	</game>
-    <game>
-        <path>./hurstythemes.rp</path>
-        <name>Hursty's Themes</name>
-        <desc>Install, uninstall, or update RetroHursty69's EmulationStation themes. It also includes an ES bootup theme randomizer to automatically switch themes on bootup.</desc>
-        <image>./icons/hurstythemes.png</image>
-    </game>
+	<game>
+		<path>./hurstythemes.rp</path>
+		<name>Hursty's Themes</name>
+		<desc>Install, uninstall, or update RetroHursty69's EmulationStation themes. It also includes an ES bootup theme randomizer to automatically switch themes on bootup.</desc>
+		<image>./icons/hurstythemes.png</image>
+	</game>
 	<game>
 		<path>./rpsetup.rp</path>
 		<name>The-RA Setup</name>
