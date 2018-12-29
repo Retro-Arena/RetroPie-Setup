@@ -128,15 +128,7 @@ function gui_esthemes() {
         local status=()
         local default
 
-        local gallerydir="/etc/emulationstation/es-theme-gallery"
-        if [[ -d "$gallerydir" ]]; then
-            status+=("i")
-            options+=(G "View or Update Theme Gallery")
-        else
-            status+=("n")
-            options+=(G "Download Theme Gallery")
-        fi
-
+        status+=("n")
         options+=(U "Update all installed themes")
 
         local i=1
