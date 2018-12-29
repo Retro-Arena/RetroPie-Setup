@@ -9,11 +9,11 @@
 # at https://raw.githubusercontent.com/RetroPie/RetroPie-Setup/master/LICENSE.md
 #
 
-rp_module_id="retropiemenu"
+rp_module_id="settingsmenu"
 rp_module_desc="TheRA configuration menu for EmulationStation"
 rp_module_section="core"
 
-function _update_hook_retropiemenu() {
+function _update_hook_settingsmenu() {
     # to show as installed when upgrading to retropie-setup 4.x
     if ! rp_isInstalled "$md_idx" && [[ -f "$home/.emulationstation/gamelists/retropie/gamelist.xml" ]]; then
         mkdir -p "$md_inst"
@@ -22,12 +22,12 @@ function _update_hook_retropiemenu() {
     fi
 }
 
-function depends_retropiemenu() {
+function depends_settingsmenu() {
     getDepends mc
 	
 }
 
-function install_bin_retropiemenu() {
+function install_bin_settingsmenu() {
     if [[ ! -f /home/pigaming/scripts/update007 ]]; then
         cp -r $HOME/fan/original $HOME/scripts/fan1-default
         cp -r $HOME/fan/cool-mode $HOME/scripts/fan2-medium
@@ -41,11 +41,11 @@ function install_bin_retropiemenu() {
     return
 }
 
-function configure_retropiemenu()
+function configure_settingsmenu()
 {
     [[ "$md_mode" == "remove" ]] && return
 
-    local rpdir="$home/RetroPie/retropiemenu"
+    local rpdir="$home/RetroPie/settingsmenu"
     mkdir -p "$rpdir"
     cp -r "$md_data/." "$rpdir/"
     chown -R $user:$user "$rpdir"
@@ -95,7 +95,7 @@ function configure_retropiemenu()
         'Enable or disable the splashscreen on RetroPie boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.'
     )
 
-    setESSystem "RetroPie" "retropie" "$rpdir" ".rp .sh" "sudo $scriptdir/retropie_packages.sh retropiemenu launch %ROM% </dev/tty >/dev/tty" "" "retropie"
+    setESSystem "RetroPie" "retropie" "$rpdir" ".rp .sh" "sudo $scriptdir/retropie_packages.sh settingsmenu launch %ROM% </dev/tty >/dev/tty" "" "retropie"
 
     local file
     local name
@@ -114,7 +114,7 @@ function configure_retropiemenu()
         file="${files[i]}"
         name="${names[i]}"
         desc="${descs[i]}"
-        image="$home/RetroPie/retropiemenu/icons/${files[i]}.png"
+        image="$home/RetroPie/settingsmenu/icons/${files[i]}.png"
 
         touch "$rpdir/$file.rp"
 
@@ -128,13 +128,13 @@ function configure_retropiemenu()
     cp -rf "$rpdir/gamelist.xml" "$home/.emulationstation/gamelists/retropie/gamelist.xml"
 }
 
-function remove_retropiemenu() {
-    rm -rf "$home/RetroPie/retropiemenu"
+function remove_settingsmenu() {
+    rm -rf "$home/RetroPie/settingsmenu"
     rm -rf "$home/.emulationstation/gamelists/retropie"
     delSystem retropie
 }
 
-function launch_retropiemenu() {
+function launch_settingsmenu() {
     clear
     local command="$1"
     local basename="${command##*/}"
@@ -171,7 +171,7 @@ function launch_retropiemenu() {
             fi
             ;;
         *.sh)
-            cd "$home/RetroPie/retropiemenu"
+            cd "$home/RetroPie/settingsmenu"
             sudo -u "$user" bash "$command"
             ;;
     esac
