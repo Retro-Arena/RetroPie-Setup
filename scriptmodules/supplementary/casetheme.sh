@@ -13,8 +13,8 @@ rp_module_section="config"
 function gui_casetheme() {
     local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Case Theme Selector" 22 86 16)
     local options=(
-        1 "Retro-Arena (default)"
-        2 "Greatest-Hits"
+        1 "retro-arena / ogst-retroarena (manning)"
+        2 "retro-arena / greatest-hits (waweedman)"
     )
     local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
     if [[ -n "$choice" ]]; then
