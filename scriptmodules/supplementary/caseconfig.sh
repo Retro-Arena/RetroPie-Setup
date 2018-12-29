@@ -11,7 +11,7 @@ rp_module_desc="OGST Case Image Selector"
 rp_module_section="config"
 
 function gui_caseconfig() {
-    local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Configuration" 22 86 16)
+    local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Case Image Selector" 22 86 16)
     local options=(
         1 "Console System         default"
         2 "Motion Blue Boxart     roms/system/boxart/ROM.png"
