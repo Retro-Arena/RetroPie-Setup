@@ -50,6 +50,7 @@ function gui_esthemes() {
         'Retro-Arena greatest-hits'
         'Retro-Arena greatest-hits-vertical'
         'Retro-Arena rick-and-morty'
+        'Retro-Arena wiitro-arena'
         #'RetroPie carbon'
         #'RetroPie carbon-centered'
         #'RetroPie carbon-nometa'
