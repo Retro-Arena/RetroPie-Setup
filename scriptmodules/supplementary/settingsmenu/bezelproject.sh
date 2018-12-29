@@ -129,7 +129,7 @@ function download_bezel() {
                 if [[ -d "/home/pigaming" ]]; then
                     cd "/home/pigaming/RetroPie/settingsmenu"
                 else
-                    cd "/home/pi/RetroPie/settingsmenu" 
+                    cd "/home/pi/RetroPie/retropiemenu" 
                 fi
                 mv "bezelproject.sh" "bezelproject.sh.bkp" 
                 wget "https://raw.githubusercontent.com/thebezelproject/BezelProject/master/bezelproject.sh" 
