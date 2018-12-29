@@ -6,11 +6,11 @@
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 
-rp_module_id="caseconfig"
+rp_module_id="casetheme"
 rp_module_desc="OGST Case Theme Selector"
 rp_module_section="config"
 
-function gui_caseconfig() {
+function gui_casetheme() {
     local cmd=(dialog --backtitle "$__backtitle" --menu "OGST Case Theme Selector" 22 86 16)
     local options=(
         1 "Retro-Arena (default)"
