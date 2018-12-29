@@ -7,7 +7,7 @@ if [[ ! -f /home/pigaming/scripts/update001 ]]; then
     dos2unix /home/pigaming/fan/original/rc.local
     dos2unix /home/pigaming/fan/cool-mode/rc.local
     dos2unix /home/pigaming/fan/aggressive/rc.local
-    wget -O /home/pigaming/ogst/system-pcfx.png https://raw.githubusercontent.com/Retro-Arena/xu4-bins/master/ogst/system-pcfx.png
+    wget -O /home/pigaming/ogst/system-pcfx.png https://raw.githubusercontent.com/Retro-Arena/ogst-retroarena/master/system-pcfx.png
     chmod a+x /home/pigaming/ogst/system-pcfx.png
     sudo cp -p /etc/rc.local.bak /etc/rc.local
     touch /home/pigaming/scripts/update001
@@ -48,7 +48,7 @@ fi
 # update007 used by retropiemenu.sh
 
 if [[ ! -f /home/pigaming/scripts/update008 ]]; then
-    wget -O /opt/retropie/configs/all/autostart.sh https://raw.githubusercontent.com/Retro-Arena/xu4-bins/master/scripts/autostart.sh
+    wget -O /opt/retropie/configs/all/autostart.sh https://pastebin.com/raw/U3Zm4a3m
     dos2unix /opt/retropie/configs/all/autostart.sh
     touch /home/pigaming/scripts/update008
 fi
