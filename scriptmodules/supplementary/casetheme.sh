@@ -23,12 +23,14 @@ function gui_casetheme() {
                 cd "$HOME/.emulationstation/ogst_themes"
                 rm -rf ogst-retroarena
                 sudo git clone https://github.com/Retro-Arena/ogst-retroarena ogst-retroarena
+                sudo chown -R pigaming:pigaming "$HOME.emulationstation/ogst_themes/ogst-retroarena"
                 printMsgs "dialog" "Option 1 Installed"
                 ;;
             2)
                 cd "$HOME/.emulationstation/ogst_themes"
                 rm -rf ogst-retroarena
                 sudo git clone https://github.com/Retro-Arena/ogst-greatest-hits ogst-retroarena
+                sudo chown -R pigaming:pigaming "$HOME.emulationstation/ogst_themes/ogst-retroarena"
                 printMsgs "dialog" "Option 2 Installed"
                 ;;
         esac
