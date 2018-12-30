@@ -59,7 +59,5 @@ if [[ ! -f /home/pigaming/scripts/update009 ]]; then
         rm -rf "$home/.emulationstation/gamelists/retropie"
         delSystem retropie
     fi
-    sudo /home/pigaming/RetroPie-Setup/retropie_packages.sh settingsmenu install_bin
-    sudo /home/pigaming/RetroPie-Setup/retropie_packages.sh settingsmenu configure
     touch /home/pigaming/scripts/update009
 fi
