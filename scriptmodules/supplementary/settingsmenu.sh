@@ -28,6 +28,11 @@ function depends_settingsmenu() {
 }
 
 function install_bin_settingsmenu() {
+    if [[ -d "$home/RetroPie/retropiemenu" ]]; then
+        rm -rf "$home/RetroPie/retropiemenu"
+        rm -rf "$home/.emulationstation/gamelists/retropie"
+        delSystem retropie
+    fi
     if [[ ! -f /home/pigaming/scripts/update007 ]]; then
         cp -r $HOME/fan/original $HOME/scripts/fan1-default
         cp -r $HOME/fan/cool-mode $HOME/scripts/fan2-medium
