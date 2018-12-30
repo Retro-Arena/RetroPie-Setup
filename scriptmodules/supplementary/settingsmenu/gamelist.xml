@@ -19,9 +19,11 @@
 		<image>./icons/configedit.png</image>
 	</game>
 	<game>
-		<path>./reset-controllers.sh</path>
+		<path>./controller-reset.sh</path>
 		<name>Controller Reset</name>
-		<desc>This will wipe out all controller configurations, and reset everything to factory default. NOTE: this will cause your system to REBOOT.</desc>
+		<desc>This will wipe out all controller configurations, and reset everything to factory default.
+
+NOTE: This will cause your system to REBOOT.</desc>
 		<image>./icons/controllerreset.png</image>
 	</game>
 	<game>
@@ -39,19 +41,25 @@
 	<game>
 		<path>./fancontrol/fan2-medium.sh</path>
 		<name>Fan Control 2 - Medium</name>
-		<desc>To update the fan to the HIGHER COOLING RATE the factory Odroid settings select this option. DISCLAIMER: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
+		<desc>To update the fan to the HIGHER COOLING RATE the factory Odroid settings select this option.
+        
+NOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
 		<image>./icons/fanmediumrate.png</image>
 	</game>
 	<game>
 		<path>./fancontrol/fan3-aggressive.sh</path>
 		<name>Fan Control 3 - Aggressive</name>
-		<desc>To update the fan to the most AGGRESSIVE COOLING RATE compared to the factory Odroid settings select this option. The fan will become noticeably loud. DISCLAIMER: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
+		<desc>To update the fan to the most AGGRESSIVE COOLING RATE compared to the factory Odroid settings select this option. The fan will become noticeably loud.
+        
+NOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
 		<image>./icons/fanaggressiverate.png</image>
 	</game>
 	<game>
 		<path>./filemanager.rp</path>
 		<name>File Manager</name>
-		<desc>Basic ascii file manager for linux allowing you to browse, copy, delete, and move files. NOTE: requires a keyboard to be connected.</desc>
+		<desc>Basic ascii file manager for linux allowing you to browse, copy, delete, and move files.
+        
+NOTE: Requires a keyboard to be connected.</desc>
 		<image>./icons/filemanager.png</image>
 	</game>
 	<game>
@@ -59,13 +67,15 @@
 		<name>Odroid Config</name>
 		<desc>OS and Hardware configurations such as: User Password, Boot Options, Internationalization, SSH, etc.
 			
-CAUTION: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup your image!</desc>
+NOTE: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup your image!</desc>
 		<image>./icons/odroidconfig.png</image>
 	</game>
 	<game>
 		<path>./retroarch.rp</path>
 		<name>RetroArch</name>
-		<desc>Launches the RetroArch GUI so you can change RetroArch options. NOTE: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.</desc>
+		<desc>Launches the RetroArch GUI so you can change RetroArch options.
+        
+NOTE: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.</desc>
 		<image>./icons/retroarch.png</image>
 	</game>
 	<game>
@@ -107,7 +117,9 @@ CAUTION: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup y
 	<game>
 		<path>./softreboot.sh</path>
 		<name>Soft Reboot</name>
-		<desc>Perform a soft reboot to recover local keyboard function if not functional. NOTE: Typically only needed after exit from PSP games and there is a need to access the terminal by exit from EmulationStation.</desc>
+		<desc>Perform a soft reboot to recover local keyboard function if not functional.
+        
+NOTE: Typically only needed after exit from PSP games and there is a need to access the terminal by exit from EmulationStation.</desc>
 		<image>./icons/softreboot.png</image>
 	</game>
 	<game>
@@ -125,7 +137,9 @@ CAUTION: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup y
 	<game>
 		<path>./wifi.sh</path>
 		<name>Wi-Fi Setup</name>
-		<desc>Connect to a wireless network. NOTE: requires a keyboard to be connected.</desc>
+		<desc>Connect to a wireless network.
+        
+NOTE: requires a keyboard to be connected.</desc>
 		<image>./icons/wifi.png</image>
 	</game>
 </gameList>
