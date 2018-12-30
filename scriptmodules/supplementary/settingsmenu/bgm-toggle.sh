@@ -3,15 +3,13 @@
 stop_bgm(){
     pkill -STOP mpg123
     sudo rm /home/pigaming/scripts/bgm/start.sc
-    clear
-    dialog --no-cancel --no-ok --pause 'Background Music Disabled.' 22 76 10
+    dialog --no-cancel --no-ok --pause 'Background music is now disabled.' 22 76 10
 }
 
 start_bgm(){
     pkill -CONT mpg123
     touch /home/pigaming/scripts/bgm/start.sc
-    dialog --no-cancel --no-ok --pause 'Background Music Enabled.' 22 76 10
-    sleep 3
+    dialog --no-cancel --no-ok --pause 'Background music is now enabled.' 22 76 10
 }
 
 if [ -a /home/pigaming/scripts/bgm/start.sc ]; then
@@ -19,5 +17,3 @@ if [ -a /home/pigaming/scripts/bgm/start.sc ]; then
 else
     start_bgm
 fi
-
-exit
