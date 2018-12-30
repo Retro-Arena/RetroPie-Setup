@@ -7,7 +7,7 @@
 #
 
 rp_module_id="caseconfig"
-rp_module_desc="OGST Case Image Selector"
+rp_module_desc="Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshots, marquees."
 rp_module_section="config"
 
 function gui_caseconfig() {

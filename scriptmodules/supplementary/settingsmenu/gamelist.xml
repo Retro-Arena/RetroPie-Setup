@@ -7,10 +7,28 @@
 		<image>./icons/bezelproject.png</image>
 	</game>
 	<game>
+		<path>./bgm-toggle.sh</path>
+		<name>BGM Toggle</name>
+		<desc>Enable or disable the background music feature.</desc>
+		<image>./icons/togglebgm.png</image>
+	</game>
+	<game>
 		<path>./bluetooth.rp</path>
 		<name>Bluetooth</name>
 		<desc>Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.</desc>
 		<image>./icons/bluetooth.png</image>
+	</game>
+	<game>
+		<path>./caseconfig.rp</path>
+		<name>Configuration Editor</name>
+		<desc>Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshots, marquees.</desc>
+		<image>./icons/caseconfig.png</image>
+	</game>
+	<game>
+		<path>./casethemes.rp</path>
+		<name>Configuration Editor</name>
+		<desc>Case theme selector for OGST - choose different theme packs when Console System is selected in Case Config.</desc>
+		<image>./icons/casethemes.png</image>
 	</game>
 	<game>
 		<path>./configedit.rp</path>
@@ -127,12 +145,6 @@ NOTE: Typically only needed after exit from PSP games and there is a need to acc
 		<name>System Info Utility</name>
 		<desc>View your CPU temps, IP connectivity, and storage to include external storage addons.</desc>
 		<image>./icons/systeminfo.png</image>
-	</game>
-	<game>
-		<path>./toggle-bgm.sh</path>
-		<name>Toggle BGM</name>
-		<desc>Enable or disable the background music feature.</desc>
-		<image>./icons/togglebgm.png</image>
 	</game>
 	<game>
 		<path>./wifi.sh</path>

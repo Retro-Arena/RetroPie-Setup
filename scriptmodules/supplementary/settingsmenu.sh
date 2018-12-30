@@ -55,6 +55,8 @@ function configure_settingsmenu()
     # add the gameslist / icons
     local files=(
         'bluetooth'
+        'caseconfig'
+        'casethemes'
         'configedit'
         'esthemes'
         'hurstythemes'
@@ -69,6 +71,8 @@ function configure_settingsmenu()
 
     local names=(
         'Bluetooth'
+        'Case Config for OGST'
+        'Case Themes for OGST'
         'Configuration Editor'
         'ES Themes'
         'HurstyS ES Themes'
@@ -83,6 +87,8 @@ function configure_settingsmenu()
 
     local descs=(
         'Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.'
+        'Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshots, marquees.'
+        'Case theme selector for OGST - choose different theme packs when Console System is selected in Case Config.'
         'Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.'
         'Install, uninstall, or update EmulationStation themes.'
         'Install, uninstall, or update HurstyS ES themes.'
@@ -92,7 +98,7 @@ function configure_settingsmenu()
         'Install TheRA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.'
         'Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.'
         'Displays your current IP address, as well as other information provided by the command, "ip addr show."'
-        'Enable or disable the splashscreen on RetroPie boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.'
+        'Enable or disable the splashscreen on The-RA boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.'
     )
 
     setESSystem "RetroPie" "retropie" "$rpdir" ".rp .sh" "sudo $scriptdir/retropie_packages.sh settingsmenu launch %ROM% </dev/tty >/dev/tty" "" "retropie"

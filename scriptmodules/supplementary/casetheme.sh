@@ -7,7 +7,7 @@
 #
 
 rp_module_id="casetheme"
-rp_module_desc="OGST Case Theme Selector"
+rp_module_desc="Case theme selector for OGST - choose different theme packs when Console System is selected in Case Config."
 rp_module_section="config"
 
 function gui_casetheme() {
