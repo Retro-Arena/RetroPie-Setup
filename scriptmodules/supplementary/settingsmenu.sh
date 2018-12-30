@@ -33,8 +33,8 @@ function install_bin_settingsmenu() {
         cp -r $HOME/fan/cool-mode $HOME/scripts/fan2-medium
         cp -r $HOME/fan/aggressive $HOME/scripts/fan3-aggressive
         rm -rf $HOME/fan
-        wget -O /usr/bin/odroid-config https://raw.githubusercontent.com/sikotik/odroid-config/master/odroid-config
-        wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh
+        wget -O /usr/bin/odroid-config https://raw.githubusercontent.com/sikotik/odroid-config/master/odroid-config &> /dev/null
+        wget -O /usr/bin/init_resize.sh https://raw.githubusercontent.com/sikotik/odroid-config/master/init_resize.sh &> /dev/null
         chmod a+X /usr/bin/init_resize.sh && chmod a+x /usr/bin/odroid-config
         touch /home/pigaming/scripts/update007
     fi
