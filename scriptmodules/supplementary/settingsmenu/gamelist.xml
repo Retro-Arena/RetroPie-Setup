@@ -25,7 +25,7 @@
 		<image>./icons/caseconfig.png</image>
 	</game>
 	<game>
-		<path>./casethemes.rp</path>
+		<path>./casetheme.rp</path>
 		<name>Case Themes</name>
 		<desc>Case theme selector for OGST - choose different theme packs when Console System is selected in Case Config.</desc>
 		<image>./icons/casethemes.png</image>

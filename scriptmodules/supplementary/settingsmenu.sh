@@ -56,7 +56,7 @@ function configure_settingsmenu()
     local files=(
         'bluetooth'
         'caseconfig'
-        'casethemes'
+        'casetheme'
         'configedit'
         'esthemes'
         'hurstythemes'
