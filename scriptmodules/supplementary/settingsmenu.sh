@@ -10,7 +10,7 @@
 #
 
 rp_module_id="settingsmenu"
-rp_module_desc="TheRA configuration menu for EmulationStation"
+rp_module_desc="The-RA configuration menu for EmulationStation"
 rp_module_section="core"
 
 function _update_hook_settingsmenu() {
