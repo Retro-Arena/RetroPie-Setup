@@ -59,13 +59,13 @@ NOTE: This will cause your system to REBOOT.</desc>
 	<game>
 		<path>./fancontrol/fan1-default.sh</path>
 		<name>Fan Control 1 - Default</name>
-		<desc>To restore the fan to the factory Odroid settings select this option.</desc>
+		<desc>Restore the fan to the factory Odroid settings.</desc>
 		<image>./icons/fandefaultrate.png</image>
 	</game>
 	<game>
 		<path>./fancontrol/fan2-medium.sh</path>
 		<name>Fan Control 2 - Medium</name>
-		<desc>To update the fan to the HIGHER COOLING RATE the factory Odroid settings select this option.
+		<desc>Update the fan to the HIGHER COOLING RATE than the factory Odroid settings.
         
 NOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
 		<image>./icons/fanmediumrate.png</image>
@@ -73,7 +73,7 @@ NOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
 	<game>
 		<path>./fancontrol/fan3-aggressive.sh</path>
 		<name>Fan Control 3 - Aggressive</name>
-		<desc>To update the fan to the most AGGRESSIVE COOLING RATE compared to the factory Odroid settings select this option. The fan will become noticeably loud.
+		<desc>Update the fan to the most AGGRESSIVE COOLING RATE than the factory Odroid settings. The fan will become noticeably loud.
         
 NOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
 		<image>./icons/fanaggressiverate.png</image>

@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
 
-# This file is NOT part of The RetroPie Project
+# This file is part of The-RA Project
 #
-# This script is a third party script to install the RetroHursty
-# Emulation Station themes onto a RetroPie build.
-#
+# The The-RA Project is the legal property of its developers, whose names are
+# too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 
 rp_module_id="hurstythemes"
