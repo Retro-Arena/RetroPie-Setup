@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
-# This file is part of The-RA Project
+# This file is part of TheRA Project
 #
-# The The-RA Project is the legal property of its developers, whose names are
+# The TheRA Project is the legal property of its developers, whose names are
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 
@@ -22,15 +22,12 @@ function gui_fancontrol() {
         case "$choice" in
             1)
                 source /home/pigaming/RetroPie/settingsmenu/fancontrol/fan1-default.sh
-                printMsgs "dialog" "Fan is now restored to the factory Odroid settings."
                 ;;
             2)
                 source /home/pigaming/RetroPie/settingsmenu/fancontrol/fan2-medium.sh
-                printMsgs "dialog" "Fan is now set to the HIGHER COOLING RATE than the factory Odroid settings.\n\nNOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES."
                 ;;
             3)
                 source /home/pigaming/RetroPie/settingsmenu/fancontrol/fan3-aggressive.sh
-                printMsgs "dialog" "Fan is now set to the most AGGRESSIVE COOLING RATE than the factory Odroid settings. The fan will become noticeably loud.\n\nNOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES."
                 ;;
         esac
     fi

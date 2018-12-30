@@ -1,13 +1,13 @@
 #!/usr/bin/env bash
 
-# This file is part of The-RA Project
+# This file is part of TheRA Project
 #
-# The The-RA Project is the legal property of its developers, whose names are
+# The TheRA Project is the legal property of its developers, whose names are
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 
 rp_module_id="settingsmenu"
-rp_module_desc="The-RA configuration menu for EmulationStation"
+rp_module_desc="TheRA configuration menu for EmulationStation"
 rp_module_section="core"
 
 function _update_hook_settingsmenu() {
@@ -95,7 +95,7 @@ function configure_settingsmenu()
         'Install TheRA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.'
         'Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.'
         'Displays your current IP address, as well as other information provided by the command, "ip addr show."'
-        'Enable or disable the splashscreen on The-RA boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.'
+        'Enable or disable the splashscreen on TheRA boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.'
     )
 
     setESSystem "RetroPie" "retropie" "$rpdir" ".rp .sh" "sudo $scriptdir/retropie_packages.sh settingsmenu launch %ROM% </dev/tty >/dev/tty" "" "retropie"

@@ -2,43 +2,43 @@
 <gameList>
 	<game>
 		<path>./bezelproject.sh</path>
-		<name>Display: Bezel Project</name>
-		<desc>This utility will provide a downloader for Retroarach system bezel packs to be used for various systems within The-RA. This utility provides a download for a bezel pack for a system and includes a PNG bezel file for every ROM for that system. The download will also include the necessary configuration files needed for Retroarch to show them. The script will also update the required retroarch.cfg files for the emulators located in the /opt/retropie/configs directory. These changes are necessary to show the PNG bezels with an opacity of 1. Periodically, new bezel packs are completed and you will need to run the script updater to download the newest version to see these additional packs.</desc>
+		<name>Bezel Project</name>
+		<desc>This utility will provide a downloader for Retroarach system bezel packs to be used for various systems within TheRA. This utility provides a download for a bezel pack for a system and includes a PNG bezel file for every ROM for that system. The download will also include the necessary configuration files needed for Retroarch to show them. The script will also update the required retroarch.cfg files for the emulators located in the /opt/retropie/configs directory. These changes are necessary to show the PNG bezels with an opacity of 1. Periodically, new bezel packs are completed and you will need to run the script updater to download the newest version to see these additional packs.</desc>
 		<image>./icons/bezelproject.png</image>
 	</game>
 	<game>
 		<path>./bgm-toggle.sh</path>
-		<name>System: BGM Toggle</name>
+		<name>BGM Toggle</name>
 		<desc>Enable or disable the background music feature.</desc>
 		<image>./icons/togglebgm.png</image>
 	</game>
 	<game>
 		<path>./bluetooth.rp</path>
-		<name>System: Bluetooth</name>
+		<name>Bluetooth</name>
 		<desc>Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.</desc>
 		<image>./icons/bluetooth.png</image>
 	</game>
 	<game>
 		<path>./caseconfig.rp</path>
-		<name>Display: Case Config</name>
+		<name>Case Config</name>
 		<desc>Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshot, or marquee.</desc>
 		<image>./icons/caseconfig.png</image>
 	</game>
 	<game>
 		<path>./casetheme.rp</path>
-		<name>Display: Case Themes</name>
+		<name>Case Themes</name>
 		<desc>Case theme selector for OGST - choose different theme packs when Console System is selected in Case Config.</desc>
 		<image>./icons/casethemes.png</image>
 	</game>
 	<game>
 		<path>./configedit.rp</path>
-		<name>General: Config Editor</name>
+		<name>Config Editor</name>
 		<desc>Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.</desc>
 		<image>./icons/configedit.png</image>
 	</game>
 	<game>
 		<path>./controller-reset.sh</path>
-		<name>System: Controller Reset</name>
+		<name>Controller Reset</name>
 		<desc>This will wipe out all controller configurations, and reset everything to factory default.
 
 NOTE: This will cause your system to REBOOT.</desc>
@@ -46,13 +46,13 @@ NOTE: This will cause your system to REBOOT.</desc>
 	</game>
 	<game>
 		<path>./esthemes.rp</path>
-		<name>Display: ES Themes</name>
+		<name>ES Themes</name>
 		<desc>Install, uninstall, or update EmulationStation themes.</desc>
 		<image>./icons/esthemes.png</image>
 	</game>
 	<game>
 		<path>./fancontrol/</path>
-		<name>System: Fan Control</name>
+		<name>Fan Control</name>
 		<desc>Change the fan settings to control cooling and fan noise.</desc>
 		<image>./icons/fancontrol.png</image>
 	</game>
@@ -80,7 +80,7 @@ NOTE: PERFORM AT YOUR OWN RISK. NO IMPLIED WARRANTIES.</desc>
 	</game>
 	<game>
 		<path>./filemanager.rp</path>
-		<name>System: File Manager</name>
+		<name>File Manager</name>
 		<desc>Basic ascii file manager for linux allowing you to browse, copy, delete, and move files.
         
 NOTE: Requires a keyboard to be connected.</desc>
@@ -88,13 +88,13 @@ NOTE: Requires a keyboard to be connected.</desc>
 	</game>
 	<game>
 		<path>./hurstythemes.rp</path>
-		<name>Display: Hursty's Themes</name>
+		<name>Hursty's Themes</name>
 		<desc>Install, uninstall, or update RetroHursty69's EmulationStation themes. It also includes an ES bootup theme randomizer to automatically switch themes on bootup.</desc>
 		<image>./icons/hurstythemes.png</image>
 	</game>
 	<game>
 		<path>./odroidconfig.rp</path>
-		<name>System: Odroid Config</name>
+		<name>Odroid Config</name>
 		<desc>OS and Hardware configurations such as: User Password, Boot Options, Internationalization, SSH, etc.
 			
 NOTE: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup your image!</desc>
@@ -102,7 +102,7 @@ NOTE: This menu is EXPERIMENTAL. Use at your own risk and be sure to backup your
 	</game>
 	<game>
 		<path>./retroarch.rp</path>
-		<name>General: RetroArch</name>
+		<name>RetroArch</name>
 		<desc>Launches the RetroArch GUI so you can change RetroArch options.
         
 NOTE: Changes will not be saved unless you have enabled the "Save Configuration On Exit" option.</desc>
@@ -110,25 +110,25 @@ NOTE: Changes will not be saved unless you have enabled the "Save Configuration 
 	</game>
 	<game>
 		<path>./runcommand.rp</path>
-		<name>Display: Runcommand Config</name>
+		<name>Runcommand Config</name>
 		<desc>Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.</desc>
 		<image>./icons/runcommand.png</image>
 	</game>
 	<game>
 		<path>./showip.rp</path>
-		<name>System: Show IP</name>
+		<name>Show IP</name>
 		<desc>Displays your current IP address, as well as other information provided by the command, "ip addr show."</desc>
 		<image>./icons/showip.png</image>
 	</game>
 	<game>
 		<path>./splashscreen.rp</path>
-		<name>Display: Splash Screens</name>
-		<desc>Enable or disable the splashscreen on The-RA boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.</desc>
+		<name>Splash Screens</name>
+		<desc>Enable or disable the splashscreen on TheRA boot. Choose a splashscreen, download new splashscreens, and return splashscreen to default.</desc>
 		<image>./icons/splashscreen.png</image>
 	</game>
 	<game>
 		<path>./softreboot.sh</path>
-		<name>System: Soft Reboot</name>
+		<name>Soft Reboot</name>
 		<desc>Perform a soft reboot to recover local keyboard function if not functional.
         
 NOTE: Typically only needed after exit from PSP games and there is a need to access the terminal by exit from EmulationStation.</desc>
@@ -136,19 +136,19 @@ NOTE: Typically only needed after exit from PSP games and there is a need to acc
 	</game>
 	<game>
 		<path>./systeminfo.sh</path>
-		<name>System: Info Utility</name>
+		<name>System Info Utility</name>
 		<desc>View your CPU temps, IP connectivity, and storage to include external storage addons.</desc>
 		<image>./icons/systeminfo.png</image>
 	</game>
 	<game>
 		<path>./rpsetup.rp</path>
-		<name>General: The-RA Setup</name>
-		<desc>Install The-RA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.</desc>
+		<name>TheRA Setup</name>
+		<desc>Install TheRA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.</desc>
 		<image>./icons/rpsetup.png</image>
 	</game>
 	<game>
 		<path>./wifi.sh</path>
-		<name>System: Wi-Fi Setup</name>
+		<name>Wi-Fi Setup</name>
 		<desc>Connect to a wireless network.
         
 NOTE: Requires a keyboard to be connected.</desc>
