@@ -501,7 +501,7 @@ function gui_setup() {
     while true; do
         local commit=$(git -C "$scriptdir" log -1 --pretty=format:"%cr (%h)")
 
-        cmd=(dialog --backtitle "$__backtitle" --title "TheRA-Setup Script" --cancel-label "Exit" --item-help --help-button --default-item "$default" --menu "TheRA: v1.62 | Base: v$__version\nLast Commit: $commit" 22 76 16)
+        cmd=(dialog --backtitle "$__backtitle" --title "TheRA-Setup Script" --cancel-label "Exit" --item-help --help-button --default-item "$default" --menu "TheRA: v1.69 | Base: v$__version\nLast Commit: $commit" 22 76 16)
         options=(
             S "Update Scripts"
             "S Update the TheRA-Setup script to the latest version."
