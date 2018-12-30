@@ -110,7 +110,7 @@ NOTE: Changes will not be saved unless you have enabled the "Save Configuration 
 	</game>
 	<game>
 		<path>./runcommand.rp</path>
-		<name>Run Command Config</name>
+		<name>Runcommand Config</name>
 		<desc>Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.</desc>
 		<image>./icons/runcommand.png</image>
 	</game>
