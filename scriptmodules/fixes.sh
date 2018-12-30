@@ -52,3 +52,13 @@ if [[ ! -f /home/pigaming/scripts/update008 ]]; then
     dos2unix /opt/retropie/configs/all/autostart.sh
     touch /home/pigaming/scripts/update008
 fi
+
+if [[ ! -f /home/pigaming/scripts/update009 ]]; then
+    if [[ -d "$home/RetroPie/retropiemenu" ]]; then
+        rm -rf "$home/RetroPie/retropiemenu"
+        rm -rf "$home/.emulationstation/gamelists/retropie"
+        delSystem retropie
+    fi
+    touch /home/pigaming/scripts/update009
+fi
+
