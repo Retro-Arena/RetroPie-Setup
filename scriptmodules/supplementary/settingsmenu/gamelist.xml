@@ -139,7 +139,7 @@ NOTE: Typically only needed after exit from PSP games and there is a need to acc
 		<name>Wi-Fi Setup</name>
 		<desc>Connect to a wireless network.
         
-NOTE: requires a keyboard to be connected.</desc>
+NOTE: Requires a keyboard to be connected.</desc>
 		<image>./icons/wifi.png</image>
 	</game>
 </gameList>
