@@ -87,7 +87,7 @@ function configure_settingsmenu()
 
     local descs=(
         'Register and connect to bluetooth devices. Unregister and remove devices, and display registered and connected devices.'
-        'Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshots, marquees.'
+        'Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshot, or marquee.'
         'Case theme selector for OGST - choose different theme packs when Console System is selected in Case Config.'
         'Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.'
         'Install, uninstall, or update EmulationStation themes.'

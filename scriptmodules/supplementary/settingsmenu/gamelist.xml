@@ -21,7 +21,7 @@
 	<game>
 		<path>./caseconfig.rp</path>
 		<name>Case Config</name>
-		<desc>Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshots, marquees.</desc>
+		<desc>Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshot, or marquee.</desc>
 		<image>./icons/caseconfig.png</image>
 	</game>
 	<game>
@@ -32,7 +32,7 @@
 	</game>
 	<game>
 		<path>./configedit.rp</path>
-		<name>Configuration Editor</name>
+		<name>Config Editor</name>
 		<desc>Change common RetroArch options, and manually edit RetroArch configs, global configs, and non-RetroArch configs.</desc>
 		<image>./icons/configedit.png</image>
 	</game>
@@ -43,6 +43,12 @@
 
 NOTE: This will cause your system to REBOOT.</desc>
 		<image>./icons/controllerreset.png</image>
+	</game>
+	<game>
+		<path>./esthemes.rp</path>
+		<name>ES Themes</name>
+		<desc>Install, uninstall, or update EmulationStation themes.</desc>
+		<image>./icons/esthemes.png</image>
 	</game>
 	<game>
 		<path>./fancontrol/</path>
@@ -81,6 +87,12 @@ NOTE: Requires a keyboard to be connected.</desc>
 		<image>./icons/filemanager.png</image>
 	</game>
 	<game>
+		<path>./hurstythemes.rp</path>
+		<name>Hursty's Themes</name>
+		<desc>Install, uninstall, or update RetroHursty69's EmulationStation themes. It also includes an ES bootup theme randomizer to automatically switch themes on bootup.</desc>
+		<image>./icons/hurstythemes.png</image>
+	</game>
+	<game>
 		<path>./odroidconfig.rp</path>
 		<name>Odroid Config</name>
 		<desc>OS and Hardware configurations such as: User Password, Boot Options, Internationalization, SSH, etc.
@@ -98,7 +110,7 @@ NOTE: Changes will not be saved unless you have enabled the "Save Configuration 
 	</game>
 	<game>
 		<path>./runcommand.rp</path>
-		<name>Run Command Configuration</name>
+		<name>Run Command Config</name>
 		<desc>Change what appears on the runcommand screen. Enable or disable the menu, enable or disable box art, and change CPU configuration.</desc>
 		<image>./icons/runcommand.png</image>
 	</game>
@@ -115,24 +127,6 @@ NOTE: Changes will not be saved unless you have enabled the "Save Configuration 
 		<image>./icons/splashscreen.png</image>
 	</game>
 	<game>
-		<path>./esthemes.rp</path>
-		<name>ES Themes</name>
-		<desc>Install, uninstall, or update EmulationStation themes.</desc>
-		<image>./icons/esthemes.png</image>
-	</game>
-	<game>
-		<path>./hurstythemes.rp</path>
-		<name>Hursty's Themes</name>
-		<desc>Install, uninstall, or update RetroHursty69's EmulationStation themes. It also includes an ES bootup theme randomizer to automatically switch themes on bootup.</desc>
-		<image>./icons/hurstythemes.png</image>
-	</game>
-	<game>
-		<path>./rpsetup.rp</path>
-		<name>The-RA Setup</name>
-		<desc>Install The-RA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.</desc>
-		<image>./icons/rpsetup.png</image>
-	</game>
-	<game>
 		<path>./softreboot.sh</path>
 		<name>Soft Reboot</name>
 		<desc>Perform a soft reboot to recover local keyboard function if not functional.
@@ -145,6 +139,12 @@ NOTE: Typically only needed after exit from PSP games and there is a need to acc
 		<name>System Info Utility</name>
 		<desc>View your CPU temps, IP connectivity, and storage to include external storage addons.</desc>
 		<image>./icons/systeminfo.png</image>
+	</game>
+	<game>
+		<path>./rpsetup.rp</path>
+		<name>The-RA Setup</name>
+		<desc>Install The-RA from binary or source, install experimental packages, additional drivers, edit samba shares, custom scraper, as well as other related configurations.</desc>
+		<image>./icons/rpsetup.png</image>
 	</game>
 	<game>
 		<path>./wifi.sh</path>
