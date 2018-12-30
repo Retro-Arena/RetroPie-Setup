@@ -20,13 +20,13 @@
 	</game>
 	<game>
 		<path>./caseconfig.rp</path>
-		<name>Configuration Editor</name>
+		<name>Case Config</name>
 		<desc>Case image selector for OGST - choose the type of image displayed upon game launch such as console system, boxart, cartart, snap, wheel, screenshots, marquees.</desc>
 		<image>./icons/caseconfig.png</image>
 	</game>
 	<game>
 		<path>./casethemes.rp</path>
-		<name>Configuration Editor</name>
+		<name>Case Themes</name>
 		<desc>Case theme selector for OGST - choose different theme packs when Console System is selected in Case Config.</desc>
 		<image>./icons/casethemes.png</image>
 	</game>
