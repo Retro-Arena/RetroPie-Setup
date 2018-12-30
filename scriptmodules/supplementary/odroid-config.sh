@@ -6,10 +6,10 @@
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
 #
 
-rp_module_id="wifi"
-rp_module_desc="Connect to a wireless network via NMTUI"
+rp_module_id="odroid-config"
+rp_module_desc="Expand filesystem, configure network, boot, localisation, SSH"
 rp_module_section="config"
 
-function gui_wifi() {
-    nmtui
+function gui_odroid-config() {
+    source /usr/bin/odroid-config
 }

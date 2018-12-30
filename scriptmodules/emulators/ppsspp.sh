@@ -95,9 +95,13 @@ function configure_ppsspp() {
     moveConfigDir "$home/.config/ppsspp" "$md_conf_root/psp"
     mkUserDir "$md_conf_root/psp/PSP"
     ln -snf "$romdir/psp" "$md_conf_root/psp/PSP/GAME"
-
-    addEmulator 0 "$md_id" "psp" "$md_inst/PPSSPPSDL --fullscreen %ROM%"
-    addSystem "psp"
+    
+    local system
+    for system in psp pspminis; do
+        mkRomDir "$system"
+        addEmulator 1 "$md_id" "$system" "$md_inst/PPSSPPSDL --fullscreen %ROM%"
+        addSystem "$system"
+    done
 	
     # gl2ext.h revert
     if [[ -e /usr/include/GLES2/gl2ext.h.org ]]; then
