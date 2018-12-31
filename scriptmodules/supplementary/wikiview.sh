@@ -12,7 +12,6 @@
 rp_module_id="wikiview"
 rp_module_desc="RetroPie-Setup Wiki Viewer"
 rp_module_section="config"
-rp_module_flags="!mali"
 
 function depends_wikiview() {
     getDepends pandoc lynx-cur

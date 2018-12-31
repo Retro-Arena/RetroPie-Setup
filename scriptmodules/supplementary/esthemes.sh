@@ -1,13 +1,16 @@
 #!/usr/bin/env bash
 
-# This file is part of TheRA Project
+# This file is part of The RetroPie Project
 #
-# The TheRA Project is the legal property of its developers, whose names are
+# The RetroPie Project is the legal property of its developers, whose names are
 # too numerous to list here. Please refer to the COPYRIGHT.md file distributed with this source.
+#
+# See the LICENSE.md file at the top-level directory of this distribution and
+# at https://raw.githubusercontent.com/RetroPie/RetroPie-Setup/master/LICENSE.md
 #
 
 rp_module_id="esthemes"
-rp_module_desc="Install themes for EmulationStation"
+rp_module_desc="Install themes for Emulation Station"
 rp_module_section="config"
 
 function depends_esthemes() {
@@ -22,11 +25,11 @@ function install_theme_esthemes() {
     local theme="$1"
     local repo="$2"
     if [[ -z "$repo" ]]; then
-        repo="Retro-Arena"
+        repo="RetroPie"
     fi
     if [[ -z "$theme" ]]; then
-        theme="showcase"
-        repo="Retro-Arena"
+        theme="carbon"
+        repo="RetroPie"
     fi
     mkdir -p "/etc/emulationstation/themes"
     gitPullOrClone "/etc/emulationstation/themes/$theme" "https://github.com/$repo/es-theme-$theme.git"
@@ -41,13 +44,17 @@ function uninstall_theme_esthemes() {
 
 function gui_esthemes() {
     local themes=(
-        'Retro-Arena showcase'
-        'Retro-Arena unified'
-        'Retro-Arena ghc'
-        'Retro-Arena greatest-hits'
-        'Retro-Arena greatest-hits-vertical'
-        'Retro-Arena rick-and-morty'
-        'Retro-Arena wiitro-arena'
+        'RetroPie carbon'
+        'RetroPie carbon-centered'
+        'RetroPie carbon-nometa'
+        'RetroPie simple'
+        'RetroPie simple-dark'
+        'RetroPie clean-look'
+        'RetroPie color-pi'
+        'RetroPie nbba'
+        'RetroPie simplified-static-canela'
+        'RetroPie turtle-pi'
+        'RetroPie zoid'
         'ehettervik pixel'
         'ehettervik pixel-metadata'
         'ehettervik pixel-tft'
@@ -94,7 +101,9 @@ function gui_esthemes() {
         'dmmarti steampunk'
         'dmmarti hurstyblue'
         'dmmarti maximuspie'
+        'dmmarti showcase'
         'dmmarti kidz'
+        'dmmarti unified'
         'rxbrad freeplay'
         'rxbrad gbz35'
         'rxbrad gbz35-dark'
@@ -104,6 +113,61 @@ function gui_esthemes() {
         'lostless playstation'
         'mrharias superdisplay'
         'coinjunkie synthwave'
+        'RetroHursty69 magazinemadness'
+        'RetroHursty69 stirling'
+        'RetroHursty69 boxalloyred'
+        'RetroHursty69 boxalloyblue'
+        'RetroHursty69 greenilicious'
+        'RetroHursty69 retroroid'
+        'RetroHursty69 merryxmas'
+        'RetroHursty69 cardcrazy'
+        'RetroHursty69 license2game'
+        'RetroHursty69 comiccrazy'
+        'RetroHursty69 snazzy'
+        'RetroHursty69 tributeGoT'
+        'RetroHursty69 tributeSTrek'
+        'RetroHursty69 tributeSWars'
+        'RetroHursty69 crisp'
+        'RetroHursty69 crisp_light'
+        'RetroHursty69 primo'
+        'RetroHursty69 primo_light'
+        'RetroHursty69 back2basics'
+        'RetroHursty69 retrogamenews'
+        'RetroHursty69 bluray'
+        'RetroHursty69 soda'
+        'RetroHursty69 lightswitch'
+        'RetroHursty69 darkswitch'
+        'RetroHursty69 whiteslide'
+        'RetroHursty69 graffiti'
+        'RetroHursty69 whitewood'
+        'RetroHursty69 sublime'
+        'RetroHursty69 infinity'
+        'RetroHursty69 neogeo_only'
+        'RetroHursty69 boxcity'
+        'RetroHursty69 vertical_arcade'
+        'RetroHursty69 cabsnazzy'
+        'RetroHursty69 garfieldism'
+        'RetroHursty69 halloweenspecial'
+        'RetroHursty69 heychromey'
+        'RetroHursty69 homerism'
+        'RetroHursty69 spaceinvaders'
+        'RetroHursty69 disenchantment'
+        'RetroHursty69 minions'
+        'RetroHursty69 tmnt'
+        'RetroHursty69 pacman'
+        'RetroHursty69 dragonballz'
+        'RetroHursty69 minecraft'
+        'RetroHursty69 incredibles'
+        'RetroHursty69 mario_melee'
+        'RetroHursty69 evilresident'
+        'RetroHursty69 hurstyspin'
+        'RetroHursty69 cyber'
+        'RetroHursty69 supersweet'
+        'RetroHursty69 donkeykonkey'
+        'RetroHursty69 snapback'
+        'RetroHursty69 heman'
+        'RetroHursty69 pitube'
+        'RetroHursty69 batmanburton'
         'Saracade scv720'
         'chicueloarcade Chicuelo'
         'SuperMagicom nostalgic'
@@ -125,7 +189,15 @@ function gui_esthemes() {
         local status=()
         local default
 
-        status+=("n")
+        local gallerydir="/etc/emulationstation/es-theme-gallery"
+        if [[ -d "$gallerydir" ]]; then
+            status+=("i")
+            options+=(G "View or Update Theme Gallery")
+        else
+            status+=("n")
+            options+=(G "Download Theme Gallery")
+        fi
+
         options+=(U "Update all installed themes")
 
         local i=1
@@ -148,6 +220,33 @@ function gui_esthemes() {
         default="$choice"
         [[ -z "$choice" ]] && break
         case "$choice" in
+            G)
+                if [[ "${status[0]}" == "i" ]]; then
+                    options=(1 "View Theme Gallery" 2 "Update Theme Gallery" 3 "Remove Theme Gallery")
+                    cmd=(dialog --backtitle "$__backtitle" --menu "Choose an option for gallery" 12 40 06)
+                    local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
+                    case "$choice" in
+                        1)
+                            cd "$gallerydir"
+                            if isPlatform "x11"; then
+                                feh --info "echo %f" --slideshow-delay 6 --fullscreen --auto-zoom --filelist images.list
+                            else
+                                fbi --timeout 6 --once --autozoom --list images.list
+                            fi
+                            ;;
+                        2)
+                            gitPullOrClone "$gallerydir" "https://github.com/wetriner/es-theme-gallery"
+                            ;;
+                        3)
+                            if [[ -d "$gallerydir" ]]; then
+                                rm -rf "$gallerydir"
+                            fi
+                            ;;
+                    esac
+                else
+                    gitPullOrClone "$gallerydir" "http://github.com/wetriner/es-theme-gallery"
+                fi
+                ;;
             U)
                 for theme in "${installed_themes[@]}"; do
                     theme=($theme)

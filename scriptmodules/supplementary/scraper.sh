@@ -191,7 +191,7 @@ function _load_config_scraper() {
 
 function gui_scraper() {
     if pgrep "emulationstatio" >/dev/null; then
-        printMsgs "dialog" "This scraper must not be run while Emulation Station is running or the scraped data will be overwritten. \n\nPlease quit from Emulation Station, and run TheRA-Setup from the terminal"
+        printMsgs "dialog" "This scraper must not be run while Emulation Station is running or the scraped data will be overwritten. \n\nPlease quit from Emulation Station, and run RetroPie-Setup from the terminal"
         return
     fi
 

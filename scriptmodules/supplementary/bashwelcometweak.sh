@@ -69,20 +69,21 @@ function retropie_welcome() {
     local bfgpur="${bld}$(tput setaf 5)"
     local bfgcyn="${bld}$(tput setaf 6)"
     local bfgwht="${bld}$(tput setaf 7)"
+
     local logo=(
-        "                  "
-        "${fgblu}      ____        "
-        "${fgblu}      |  |        "
-        "${fgblu}      |  |        "
-        "${fgblu}      |  |        "		
-        "${fgblu} ____/    \__${fgred}==${fgblu}_  "
-        "${fgblu}|               | "
-        "${fgblu}| ${fggrn}TheRetroArena ${fgblu}| "
-        "${fgblu}|_______________| "
-        "${fggrn}theretroarena.com "
-        "                  "
-        "                  "
+        "                     "
+        "${fgylw}    )  (             "
+        "${fgylw} ( /(  )\ )   (      "
+        "${fgred} )\())(()/(   )\     "
+        "${fgred}((_)\  /(_)|(((_)(   "
+        "${fgred}  ((_)(_))  ()${fggrn} _ ${fgred})\  "
+        "${fggrn} / _ \| _ \ ${fgred}(_)${fggrn}_\ ${fgred}(_)"
+        "${fggrn}| (_) |   /  / _ \   "
+        "${fggrn} \___/|_|_\ /_/ \_\  "
+        "                     "
+        "                     "
         )
+
 
     local out
     local i
@@ -114,7 +115,10 @@ function retropie_welcome() {
                 out+="${fgred}IP Address.........: $(ip route get 8.8.8.8 2>/dev/null | awk '{print $NF; exit}')"
                 ;;
             9)
-                out+="${fgred}Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F${fgwht}"
+                out+="Temperature........: CPU: $cpuTempC°C/$cpuTempF°F GPU: $gpuTempC°C/$gpuTempF°F"
+                ;;
+            10)
+                out+="${fgwht}The RetroPie Project, https://retropie.org.uk"
                 ;;
         esac
         out+="\n"
@@ -153,3 +157,4 @@ function gui_bashwelcometweak() {
         esac
     fi
 }
+

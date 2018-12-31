@@ -49,7 +49,7 @@ if [[ "$(id -u)" -ne 0 ]]; then
     exit 1
 fi
 
-__backtitle=""
+__backtitle="retropie.org.uk - RetroPie Setup. Installation folder: $rootdir for user $user"
 
 source "$scriptdir/scriptmodules/system.sh"
 source "$scriptdir/scriptmodules/helpers.sh"

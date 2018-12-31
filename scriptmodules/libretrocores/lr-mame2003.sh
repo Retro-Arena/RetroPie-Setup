@@ -37,10 +37,6 @@ function build_lr-mame2003() {
     md_ret_require="$md_build/$(_get_so_name_${md_id})_libretro.so"
 }
 
-function install_bin_lr-mame2003() {
-    downloadAndExtract "http://github.com/Retro-Arena/xu4-bins/raw/master/lr-mame2003.tar.gz" "$md_inst" 1
-}
-
 function install_lr-mame2003() {
     md_ret_files=(
         "$(_get_so_name_${md_id})_libretro.so"
@@ -48,6 +44,10 @@ function install_lr-mame2003() {
         'CHANGELOG.md'
         'metadata'
     )
+}
+
+function install_bin_lr-mame2003() {
+    downloadAndExtract "http://github.com/Retro-Arena/xu4-bins/raw/master/lr-mame2003.tar.gz" "$md_inst" 1
 }
 
 function configure_lr-mame2003() {
@@ -71,11 +71,11 @@ function configure_lr-mame2003() {
     # copy hiscore.dat and cheat.dat
     cp "$md_inst/metadata/"{hiscore.dat,cheat.dat} "$biosdir/$dir_name/"
     chown $user:$user "$biosdir/$dir_name/"{hiscore.dat,cheat.dat}
-
+    
     # lr-mame2003-plus also has an artwork folder
     if [[ "$md_id" == "lr-mame2003-plus" ]]; then
-        mkUserDir "$biosdir/$dir_name/artwork"
-        cp "$md_inst/metadata/artwork/"* "$biosdir/$dir_name/artwork/"
+        mkRomDir "$biosdir/$dir_name/artwork"
+        cp "$md_inst"/metadata/artwork/* "$biosdir/$dir_name"/artwork/
         chown -R $user:$user "$biosdir/$dir_name/artwork"
     fi
 

@@ -35,7 +35,7 @@ function rps_retronet_loadconfig() {
         __netplayport="55435"
         __netplayhostip="192.168.0.1"
         __netplayhostip_cfile=""
-        __netplaynickname="TheRA"
+        __netplaynickname="RetroPie"
     fi
 }
 
@@ -78,7 +78,7 @@ function rps_retronet_hostip() {
 }
 
 function rps_retronet_nickname() {
-    cmd=(dialog --backtitle "$__backtitle" --inputbox "Please enter the nickname you wish to use (default: TheRA)" 22 76 $__netplaynickname)
+    cmd=(dialog --backtitle "$__backtitle" --inputbox "Please enter the nickname you wish to use (default: RetroPie)" 22 76 $__netplaynickname)
     choice=$("${cmd[@]}" 2>&1 >/dev/tty)
     if [[ -n "$choice" ]]; then
         __netplaynickname="$choice"

@@ -15,7 +15,7 @@ rp_module_section="main"
 rp_module_flags="noinstclean !x86 !osmc !xbian  !kms"
 
 function _update_hook_splashscreen() {
-    # make sure splashscreen is always up to date if updating just TheRA-Setup
+    # make sure splashscreen is always up to date if updating just RetroPie-Setup
     if rp_isInstalled "$md_idx"; then
         install_bin_splashscreen
         configure_splashscreen
@@ -113,7 +113,7 @@ function remove_splashscreen() {
 
 function choose_path_splashscreen() {
     local options=(
-        1 "TheRA splashscreens"
+        1 "RetroPie splashscreens"
         2 "Own/Extra splashscreens (from $datadir/splashscreens)"
     )
     local cmd=(dialog --backtitle "$__backtitle" --menu "Choose an option." 22 86 16)
@@ -173,7 +173,7 @@ function choose_splashscreen() {
 
 function randomize_splashscreen() {
     options=(
-        1 "Randomize TheRA splashscreens"
+        1 "Randomize RetroPie splashscreens"
         2 "Randomize own splashscreens (from $datadir/splashscreens)"
         3 "Randomize all splashscreens"
         4 "Randomize /etc/splashscreen.list"
@@ -183,7 +183,7 @@ function randomize_splashscreen() {
     iniConfig "=" '"' "$md_inst/asplashscreen.sh"
     case "$choice" in
         1)
-            iniSet "RANDOMIZE" "TheRA"
+            iniSet "RANDOMIZE" "retropie"
             printMsgs "dialog" "Splashscreen randomizer enabled in directory $path"
             ;;
         2)
@@ -237,7 +237,7 @@ function preview_splashscreen() {
                 3)
                     file=$(choose_splashscreen "$path" "video")
                     [[ -z "$file" ]] && break
-                    mplayer -vo fbdev -fs "$file"
+                    omxplayer -b --layer 10000 "$file"
                     ;;
             esac
         done
@@ -279,7 +279,7 @@ function gui_splashscreen() {
             5 "Manually edit splashscreen list"
             6 "Append splashscreen to list (for multiple entries)"
             7 "Preview splashscreens"
-            8 "Update TheRA splashscreens"
+            8 "Update RetroPie splashscreens"
             9 "Download RetroPie-Extra splashscreens"
         )
         local choice=$("${cmd[@]}" "${options[@]}" 2>&1 >/dev/tty)
@@ -308,7 +308,7 @@ function gui_splashscreen() {
                     ;;
                 4)
                     default_splashscreen
-                    printMsgs "dialog" "Splashscreen set to TheRA default."
+                    printMsgs "dialog" "Splashscreen set to RetroPie default."
                     ;;
                 5)
                     editFile /etc/splashscreen.list

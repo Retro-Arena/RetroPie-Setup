@@ -90,16 +90,14 @@ function install_bin_ppsspp() {
 }
 
 function configure_ppsspp() {
-    local system
-    for system in psp pspminis; do
-        mkRomDir "$system"
-        moveConfigDir "$home/.config/ppsspp" "$md_conf_root/$system"
-        mkUserDir "$md_conf_root/$system/PSP"
-        ln -snf "$romdir/$system" "$md_conf_root/$system/PSP/GAME"
-        mkRomDir "$system"
-        addEmulator 1 "$md_id" "$system" "$md_inst/PPSSPPSDL --fullscreen %ROM%"
-        addSystem "$system"
-    done
+    mkRomDir "psp"
+
+    moveConfigDir "$home/.config/ppsspp" "$md_conf_root/psp"
+    mkUserDir "$md_conf_root/psp/PSP"
+    ln -snf "$romdir/psp" "$md_conf_root/psp/PSP/GAME"
+
+    addEmulator 0 "$md_id" "psp" "$md_inst/PPSSPPSDL %ROM%"
+    addSystem "psp"
 	
     # gl2ext.h revert
     if [[ -e /usr/include/GLES2/gl2ext.h.org ]]; then
