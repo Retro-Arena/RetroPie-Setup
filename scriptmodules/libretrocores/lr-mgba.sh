@@ -40,7 +40,7 @@ function install_lr-mgba() {
 }
 
 function install_bin_lr-mgba() {
-    downloadAndExtract "http://github.com/Retro-Arena/xu4-bins/raw/master/lr-mgba.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/lr-mgba.tar.gz" "$md_inst" 1
 }
 
 function configure_lr-mgba() {

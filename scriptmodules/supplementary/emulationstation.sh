@@ -163,7 +163,7 @@ function install_emulationstation() {
 }
 
 function install_bin_emulationstation() {
-    downloadAndExtract "http://github.com/Retro-Arena/xu4-bins/raw/master/emulationstation.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/emulationstation.tar.gz" "$md_inst" 1
 }
 
 function init_input_emulationstation() {
