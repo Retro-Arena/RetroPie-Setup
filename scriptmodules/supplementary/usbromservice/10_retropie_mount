@@ -10,7 +10,7 @@
 #
 
 ## config / defaults
-user="USERTOBECHOSEN"
+user="pigaming"
 
 home="$(eval echo ~$user)"
 retropie_path="$home/RetroPie/roms"
