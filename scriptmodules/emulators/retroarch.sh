@@ -73,7 +73,7 @@ function install_retroarch() {
 }
 
 function install_bin_retroarch() {
-    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/retroarch_b91938b.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/binaries/raw/master/odroid-xu4/retroarch_b91938b.tar.gz" "$md_inst" 1
 }
 
 function update_shaders_retroarch() {

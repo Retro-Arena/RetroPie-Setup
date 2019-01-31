@@ -38,7 +38,7 @@ function install_lr-fbalpha() {
 }
 
 function install_bin_lr-fbalpha() {
-    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/lr-fbalpha.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/binaries/raw/master/odroid-xu4/lr-fbalpha.tar.gz" "$md_inst" 1
 }
 
 function configure_lr-fbalpha() {

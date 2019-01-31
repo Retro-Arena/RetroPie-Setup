@@ -32,7 +32,7 @@ function install_lr-reicast() {
 }
 
 function install_bin_lr-reicast() {
-    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/lr-reicast.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/binaries/raw/master/odroid-xu4/lr-reicast.tar.gz" "$md_inst" 1
 }
 
 function configure_lr-reicast() {    

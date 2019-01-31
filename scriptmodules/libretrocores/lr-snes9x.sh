@@ -41,7 +41,7 @@ function install_lr-snes9x() {
 }
 
 function install_bin_lr-snes9x() {
-    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/lr-snes9x.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/binaries/raw/master/odroid-xu4/lr-snes9x.tar.gz" "$md_inst" 1
 }
 
 function configure_lr-snes9x() {

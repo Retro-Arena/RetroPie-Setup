@@ -36,7 +36,7 @@ function install_lr-mame2003-plus() {
 }
 
 function install_bin_lr-mame2003-plus() {
-    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/lr-mame2003-plus.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/binaries/raw/master/odroid-xu4/lr-mame2003-plus.tar.gz" "$md_inst" 1
 }
 
 function configure_lr-mame2003-plus() {

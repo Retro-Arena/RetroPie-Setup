@@ -41,7 +41,7 @@ function install_yabause() {
 }
 
 function install_bin_yabause() {
-    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/yabause.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/binaries/raw/master/odroid-xu4/yabause.tar.gz" "$md_inst" 1
 }
 
 function configure_yabause() {

@@ -32,7 +32,7 @@ function install_lr-4do() {
 }
 
 function install_bin_lr-4do() {
-    downloadAndExtract "http://github.com/Retro-Arena/RetroArena-Bins/raw/master/odroid-xu4/lr-4do.tar.gz" "$md_inst" 1
+    downloadAndExtract "http://github.com/Retro-Arena/binaries/raw/master/odroid-xu4/lr-4do.tar.gz" "$md_inst" 1
 }
 
 function configure_lr-4do() {
