@@ -96,7 +96,7 @@ function configure_ppsspp() {
     mkUserDir "$md_conf_root/psp/PSP"
     ln -snf "$romdir/psp" "$md_conf_root/psp/PSP/GAME"
 
-    addEmulator 0 "$md_id" "psp" "$md_inst/PPSSPPSDL %ROM%"
+    addEmulator 0 "$md_id" "psp" "$md_inst/PPSSPPSDL --fullscreen %ROM%"
     addSystem "psp"
 	
     # gl2ext.h revert
